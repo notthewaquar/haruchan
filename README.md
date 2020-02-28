@@ -1,0 +1,2 @@
+# haruchan
+my first repo
