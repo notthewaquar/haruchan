@@ -22,6 +22,7 @@ select{
 }
 .chart-div input,
 .chart-div select{
+      border-radius: 5px;
 font-size: 14px;
 color: #111111;
 }
@@ -55,10 +56,13 @@ color: #111111;
   margin-left: 3px;
   padding: 5px;
 }
-.chart-div .dynamic-axis-append>div{
-display: flex;
+.chart-div .dynamic-axis-append.y-axis-parent-div>div.my-hide-11{
+display: flex !important;
 justify-content: space-between;
 margin-bottom: 5px;
+}
+.chart-div .dynamic-axis-append.y-axis-parent-div>div{
+  display: none !important;
 }
 .my-show{
   display:none !important;
@@ -175,3 +179,64 @@ display: inline-block;
 #colorModal
 #colorModal
 #colorModal{}
+.select-y-axis-dropdown {
+  position: relative;
+}
+.select-y-axis-dropdown .dropdown-btn{
+    width: 82px;
+    font-size: 12px;
+    padding: 6px 3px 6px 7px;
+    text-align: left;
+}
+.select-y-axis-dropdown .dropdown-menu{
+width: 120px;
+max-width: 120px;
+min-width: 120px;
+left: auto !important;
+right: 0 !important;
+}
+.select-y-axis-dropdown .dropdown-menu button{
+/*p-1 m-0 border-0 dropdown-item w-100*/
+padding: 6px 10px;
+margin: 0;
+border-width: 0px;
+text-align: left;
+width: 100%;
+border-bottom: 1px solid #666;
+}
+.select-y-axis-dropdown .dropdown-menu button:hover{
+    background: rgb(127 255 0);
+}
+.table-div-shadow{
+  box-shadow:0 0 10px -1px #4b1bff;
+}
+.header-table .aaa{
+  width: 45px !important;
+}
+.table-div-shadow {
+
+}
+th{
+  cursor: pointer;
+}
+th.outline-sel{
+  background: lightgreen !important;
+}
+td.outline-sel{
+  background: #dfffdf !important;
+}
+.table-div-shadow thead:not(.t-title) th{
+background-image: linear-gradient(45deg, #999, #999);
+}
+.btn-tab-11{
+      font-size: 15px;
+    font-weight: 700;
+    padding-top: 5px !important;
+    padding-bottom: 5px !important;
+}
+.ibox-content th.p-0{
+  padding: 0 !important;
+}
+.top-thead{
+  display: none;
+}

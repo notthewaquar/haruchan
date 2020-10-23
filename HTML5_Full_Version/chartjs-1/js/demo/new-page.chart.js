@@ -26,13 +26,15 @@
     console.log(newVal);
   }
   function updateChart1(e) {
+    $('.table-div').removeClass('table-div-shadow');
     var chartIndex1 = $(e).attr('chartIndex');
     // select value
     var index = e.value;
     // select label
     var tableTitle = parseInt(index) + 1;
-    var myLabel =  $("#data-table thead tr th:nth-child("+ tableTitle + ")").text();
-
+    var myLabel =  $("#data-table thead.t-title tr th:nth-child("+ tableTitle + ")").text();
+    // select option name
+    $(e).parent('div').prev('button').text(myLabel);
     // get values form table
     var myArr = $("#data-table")
                 .find('tr')
@@ -57,7 +59,7 @@
       yDataArr.push(parseInt(kkkkk));
     };
     // get values form table
-    var colorArray = ['#FF6633', '#FFB399', '#FF33FF', '#FFFF99', '#00B3E6', 
+    var colorArray = ['#FF6633', '#9900B3', '#4DB3FF', '#3366E6', '#00B3E6', 
 		  '#E6B333', '#3366E6', '#999966', '#99FF99', '#B34D4D',
 		  '#80B300', '#809900', '#E6B3B3', '#6680B3', '#66991A', 
 		  '#FF99E6', '#CCFF1A', '#FF1A66', '#E6331A', '#33FFCC',
@@ -77,7 +79,7 @@
       });
     } else {
       chart.data.datasets[chartIndex1].label = myLabel;
-      chart.data.datasets[chartIndex1].backgroundColor = colorArray[index];
+      // chart.data.datasets[chartIndex1].backgroundColor = colorArray[index];
       chart.data.datasets[chartIndex1].data =  yDataArr;
     }
 
@@ -89,7 +91,7 @@
     var index = xAxixData.value;
     // select label
     var tableTitle = parseInt(index) + 1;
-    var myLabel =  $("#data-table thead tr th:nth-child("+ tableTitle + ")").text();
+    var myLabel =  $("#data-table thead.t-title tr th:nth-child("+ tableTitle + ")").text();
 
     // get values form table
     var myArr = $("#data-table")
@@ -148,4 +150,150 @@ function setChartColor(target1) {
   // console.log('NOT');
 };
 //  end bar chart
+// table shadow
+tabIndDY = 0;
+function tableShadow(indDynamic){
+  tabIndDY = indDynamic - 1;
+  console.log(tabIndDY);
+  $('.table-div').addClass('table-div-shadow');
+  $('.top-thead2').hide();
+  $('.top-thead').show();
+}
 
+$('.top-thead').hide();
+
+$('.top-thead button').click(function() {
+  $('.top-thead2').show();
+  $('.top-thead').hide(); 
+});
+
+$(".hover1").on({
+    mouseenter: function () {
+      tableHeadAdd(1)
+    },
+    mouseleave: function () {
+      tableHeadRemove(1)      
+    },
+    click: function () {
+      tableHeadUpdateChart(tabIndDY, 1);
+    }
+});
+$(".hover2").on({
+    mouseenter: function () {
+      tableHeadAdd(2)     
+    },
+    mouseleave: function () {
+      tableHeadRemove(2)      
+    },
+    click: function () {
+      tableHeadUpdateChart(tabIndDY, 2);
+    }
+});
+$(".hover3").on({
+    mouseenter: function () {
+      tableHeadAdd(3)     
+    },
+    mouseleave: function () {
+      tableHeadRemove(3)      
+    },
+    click: function () {
+      tableHeadUpdateChart(tabIndDY, 3);
+    }
+});
+$(".hover4").on({
+    mouseenter: function () {
+      tableHeadAdd(4)     
+    },
+    mouseleave: function () {
+      tableHeadRemove(4)      
+    },
+    click: function () {
+      tableHeadUpdateChart(tabIndDY, 4);
+    }
+});
+$(".hover5").on({
+    mouseenter: function () {
+      tableHeadAdd(5)     
+    },
+    mouseleave: function () {
+      tableHeadRemove(5)      
+    },
+    click: function () {
+      tableHeadUpdateChart(tabIndDY, 5);
+    }
+});
+$(".hover6").on({
+    mouseenter: function () {
+      tableHeadAdd(6)     
+    },
+    mouseleave: function () {
+      tableHeadRemove(6)      
+    },
+    click: function () {
+      tableHeadUpdateChart(tabIndDY, 6);
+    }
+});
+function tableHeadAdd(ind) {
+  $('.table-div th:nth-child('+ind+')').addClass('outline-sel');
+  $('.table-div td:nth-child('+ind+')').addClass('outline-sel');    
+}
+function tableHeadRemove(ind) {
+  $('.table-div th:nth-child('+ind+')').removeClass('outline-sel');
+  $('.table-div td:nth-child('+ind+')').removeClass('outline-sel');    
+}
+function tableHeadUpdateChart(chartInd, tabInO) {
+$('.table-div').removeClass('table-div-shadow');
+    // select value
+    var index = tabInO;
+    // select label
+    var tableTitle = parseInt(index);
+    var myLabel =  $("#data-table thead.t-title tr th:nth-child("+ tableTitle + ")").text();
+
+    // get values form table
+    var myArr2 = $("#data-table")
+                .find('tr:not(\'.thead1\')')
+                .map(function(){
+    return [ 
+      // $("th", this).text(),
+      $("td", this).map(
+        function(){ 
+          return $(this).text();
+        }
+      ).get()
+      ];
+    }).get();
+    selectedYAxis = index;
+    selectedYAxis = parseInt(selectedYAxis)-1;
+
+    yDataArr2 = [];
+    var myTableRows = $("#data-table tbody tr").length;
+    
+    for (var b = 1; b < myTableRows; b++) {
+      kkkkk2 = myArr2[b][selectedYAxis];
+      yDataArr2.push(parseInt(kkkkk2));
+    };
+    var colorArray = ['#FF6633', '#FF3380', '#66E64D', '#4D8066', '#1AFF33' ]
+
+    if (!chart.data.datasets[chartInd]) {
+      chart.data.datasets.push({
+        label: myLabel,
+        backgroundColor: colorArray[chartInd],
+        pointBorderColor: "#fff",
+        data: yDataArr2
+      });
+      console.log('Hello World');
+    } else {
+      chart.data.datasets[chartInd].label = myLabel;
+      // chart.data.datasets[chartInd].backgroundColor = colorArray[chartInd];
+      chart.data.datasets[chartInd].data =  yDataArr2;
+    }
+
+    chart.update();
+}
+
+indexOfYInput = 1;
+$('#addYAxisData').click(function() {
+  $('.y-axis-parent-div div:nth-child('+indexOfYInput+')').addClass('my-hide-11');
+  indexOfYInput++;
+  console.log(indexOfYInput);
+})

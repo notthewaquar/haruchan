@@ -77,7 +77,7 @@
                       </div>
                       <div class="pt-0 axis-select">
                         <label for="valuesY">Values (y-axis)</label>
-                        <div id="yAxisDiv" class="dynamic-axis-append">
+                        <div id="yAxisDiv" class="dynamic-axis-append y-axis-parent-div">
                           <!-- first input start -->
                           <div class="d-flex justify-content-between axis-append-div" id="xAxisAppendDiv1">
                             <input type="text" id="xAxisInputHidden1" class="axis-append-input" placeholder="yAx1">
@@ -85,23 +85,26 @@
                               <option value="sum" selected="">sum</option>
                             </select>
                             <span class="aaof">of</span>
-                            <select 
-                                class="form-control bb" 
-                                id="valuesYColumn1"
-                                onChange="updateChart1(this)"
-                                chartIndex="0">
-                                <option value="11" selected disabled>choose...</option>
-                                <option value="0">sl</option>
-                                <option value="1">ga:session</option>
-                                <option value="2">ga:user</option>
-                            </select>
+                            <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(1)">
+                                Choose... 
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown4">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="0">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="0">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="0">ga:user
+                                </button>
+                              </div>
+                            </div>
                             <div class="">
                             	<button 
                                 class="btn btn-white option" 
                                 type="button"
                                 onClick="openColorModal(0)"
                                 >
-                                <i class="fa fa-ellipsis-v"></i>
+                                <i class="fa fa-eyedropper"></i>
+                                
                                 </button>
                             </div>
                           </div>
@@ -113,23 +116,26 @@
                               <option value="sum" selected="">sum</option>
                             </select>
                               <span class="aaof">of</span>
-                              <select 
-                                class="form-control bb" 
-                                id="valuesYColumn1"
-                                onChange="updateChart1(this)"
-                                chartIndex="1">
-                                <option value="11" selected disabled>choose...</option>
-                                <option value="0">sl</option>
-                                <option value="1">ga:session</option>
-                                <option value="2">ga:user</option>
-                            </select>
+                              <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(2)">
+                                Choose... 
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown3">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="1">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="1">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="1">ga:user
+                                </button>
+                              </div>
+                            </div>
                             <div class="">
                             	<button 
                                 class="btn btn-white option" 
                                 type="button"
                                 onClick="openColorModal(1)"
                                 >
-                                <i class="fa fa-ellipsis-v"></i>
+                                <i class="fa fa-eyedropper"></i>
+                                
                                 </button>
                             </div>
                           </div>
@@ -141,7 +147,38 @@
                               <option value="sum" selected="">sum</option>
                             </select>
                               <span class="aaof">of</span>
-                              <select 
+                              <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(3)">
+                                Choose... 
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown2">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="2">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="2">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="2">ga:user
+                                </button>
+                              </div>
+                            </div>
+                            <div class="">
+                              <button 
+                                class="btn btn-white option" 
+                                type="button"
+                                onClick="openColorModal(2)"
+                                >
+                                <i class="fa fa-eyedropper"></i>
+                                </button>
+                            </div>
+                          </div>
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
+                          <div class="d-flex justify-content-between axis-append-div" id="xAxisAppendDiv3">
+                            <input type="text" id="xAxisInputHidden3" class="axis-append-input" placeholder="yAx3">
+                            <select class="form-control selectTrigger aa" id="valuesYMath3">
+                              <option value="sum" selected="">sum</option>
+                            </select>
+                              <span class="aaof">of</span>
+                            <!-- <select 
                                 class="form-control bb" 
                                 id="valuesYColumn1"
                                 onChange="updateChart1(this)"
@@ -150,24 +187,40 @@
                                 <option value="0">sl</option>
                                 <option value="1">ga:session</option>
                                 <option value="2">ga:user</option>
-                            </select>
+                            </select> -->
+                            <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(4)">
+                                Choose... 
+                                <!-- <i class="fa fa-angle-down"></i> -->
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown1">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="3">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="3">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="3">ga:user
+                                </button>
+                              </div>
+                            </div>
                             <div class="">
                               <button 
                                 class="btn btn-white option" 
                                 type="button"
-                                onClick="openColorModal(2)"
+                                onClick="openColorModal(3)"
                                 >
-                                <i class="fa fa-ellipsis-v"></i>
+                                <i class="fa fa-eyedropper"></i>
                                 </button>
                             </div>
                           </div>
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
                           <!-- second input end -->
                           <button type="button" id="addYAxisData" class="btn btn-info btn-sm my-1">+ Add value</button>
                         </div>
                       </div>
                       <div class="form-group axis-select">
                         <label for="valuesX">Values (x-axis)</label>
-                        <div id="xAxisDiv" class="dynamic-axis-append" style="display: none;">
+                        <div id="xAxisDiv" class="dynamic-axis-append x-axis-parent-div" style="display: none;">
                         <div class="d-flex justify-content-between">
                           <select class="form-control bb" id="valuesX" onChange="updateChartX(this)">
                             <option value="11" selected disabled>choose...</option>
@@ -193,7 +246,6 @@
                                 <li><a href="#">Something else here</a></li>
                                 <li class="dropdown-divider"></li>
                                 <li>
-                                  <!-- onclick="(showXAxisDiv())" -->
                                   <a 
                                     href="#" 
                                     class="text-danger">Separated link dasd</a></li>
@@ -281,7 +333,7 @@ function xAxisDiv() {
                         <div class="d-block">
                           <button 
                             type="button"
-                            class="btn btn-primary"
+                            class="btn btn-primary d-none"
                             onClick="updateChart()">UPDATE CHART</button>
                         </div>
                     <!-- </a> -->
@@ -294,6 +346,7 @@ function xAxisDiv() {
         <div id="page-wrapper" class="gray-bg">
         <!-- top navbar -->
         <!-- top navbar -->
+
         <!-- top navbar -->
         <!-- top navbar -->
         <!-- top navbar -->
@@ -356,22 +409,60 @@ function xAxisDiv() {
                 </div>
               </div>
               <div class="ibox-content">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <th>
-                        <i class="fa fa-lock"></i>
-                      </th>
-                      <th>A</th>
-                      <th>B</th>
-                      <th>C</th>
-                      <th>D</th>
-                      <th>E</th>
-                    </tr>
-                  </thead>
+                <div class="table-div">
+                  
+                <table class="table table-bordered mb-0 header-table">
                 </table>
                 <table id="data-table" class="table table-bordered">
-                  <thead>
+                  <thead class="top-thead">
+                    <tr class="thead1 thead-a-1">
+                      <th class="p-0 text-center aaa hover1 btn-tab-11">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">
+                          <i class="fa fa-lock"></i>
+                        </button>
+                      </th>
+                      <th class="p-0 hover2">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">A</button>
+                      </th>
+                      <th class="p-0 hover3">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">B</button>
+                      </th>
+                      <th class="p-0 hover4">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">C</button>
+                      </th>
+                      <th class="p-0 hover5">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">D</button>
+                      </th>
+                      <th class="p-0 hover6">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">E</button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <thead class="top-thead2">
+                  <tr class="thead1 thead-a-2">
+                    <th class="p-0 text-center aaa btn-tab-11">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">
+                      <i class="fa fa-lock"></i>
+                      </button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">A</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">B</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">C</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">D</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">E</button>
+                    </th>
+                  </tr>
+                </thead>
+                  <thead class="t-title">
                     <tr>
                       <th>Sl.</th>
                       <th>ga:session</th>
@@ -705,6 +796,8 @@ function xAxisDiv() {
                     </tr>
                   </tbody>
                 </table>
+              
+                </div>
               </div>
             </div>
           </div>
