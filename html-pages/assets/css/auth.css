@@ -263,7 +263,7 @@ button.ghost {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 90vh;
+  height: 72vh;
  }
 
  .overlay-container {
