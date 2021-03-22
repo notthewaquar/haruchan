@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | ChartJS</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div id="wrapper">
+    <nav class="navbar-default navbar-static-side" role="navigation">
+        <div class="sidebar-collapse">
+            <ul class="nav metismenu" id="side-menu">
+                <!-- <li class="nav-header">
+                    <div class="dropdown profile-element">
+                        <img alt="image" class="rounded-circle" src="img/profile_small.jpg"/>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <span class="block m-t-xs font-bold">David Williams</span>
+                            <span class="text-muted text-xs block">Art Director <b class="caret"></b></span>
+                        </a>
+                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="contacts.html">Contacts</a></li>
+                            <li><a class="dropdown-item" href="mailbox.html">Mailbox</a></li>
+                            <li class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
+                        </ul>
+                    </div>
+                    <div class="logo-element">
+                        IN+
+                    </div>
+                </li> -->
+                <!-- <li>
+                    <a href="index.html"><i class="fa fa-th-large"></i> <span class="nav-label">Dashboards</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level collapse">
+                        <li><a href="index.html">Dashboard v.1</a></li>
+                        <li><a href="dashboard_2.html">Dashboard v.2</a></li>
+                        <li><a href="dashboard_3.html">Dashboard v.3</a></li>
+                        <li><a href="dashboard_4_1.html">Dashboard v.4</a></li>
+                        <li><a href="dashboard_5.html">Dashboard v.5 </a></li>
+                    </ul>
+                </li> -->
+                <li class="chart-div" style="padding: 10px;">
+                    <!-- <a> -->
+                      <div class="">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="chart-title" aria-describedby="chart-title" placeholder="Click to add a title">
+                        </div>
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="chart-description" aria-describedby="chart-description" placeholder="Click to add a description">
+                        </div>
+                      </div>
+                      <div>
+                        <div class="form-group">
+                          <label for="chart-type" class="d-flex justify-content-between">
+                            <span>Chart type</span>
+                            <i class="fa fa-bar-chart-o"></i></label>
+                          <select class="form-control" id="chart-type">
+                            <option value="1" selected>Bar</option>
+                            <option value="2">Pie</option>
+                            <option value="3">Line</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="pt-0 axis-select">
+                        <label for="valuesY">Values (y-axis)</label>
+                        <div id="yAxisDiv" class="dynamic-axis-append y-axis-parent-div">
+                          <!-- first input start -->
+                          <div class="d-flex justify-content-between axis-append-div" id="xAxisAppendDiv1">
+                            <input type="text" id="xAxisInputHidden1" class="axis-append-input" placeholder="yAx1">
+                            <select class="form-control selectTrigger aa" id="valuesYMath1">
+                              <option value="sum" selected="">sum</option>
+                            </select>
+                            <span class="aaof">of</span>
+                            <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(1)">
+                                Choose... 
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown4">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="0">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="0">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="0">ga:user
+                                </button>
+                              </div>
+                            </div>
+                            <div class="">
+                            	<button 
+                                class="btn btn-white option" 
+                                type="button"
+                                onClick="openColorModal(0)"
+                                >
+                                <i class="fa fa-eyedropper"></i>
+                                
+                                </button>
+                            </div>
+                          </div>
+                          <!-- first input end -->
+                          <!-- second input start -->
+                          <div class="d-flex justify-content-between axis-append-div" id="xAxisAppendDiv2">
+                            <input type="text" id="xAxisInputHidden2" class="axis-append-input" placeholder="yAx2">
+                            <select class="form-control selectTrigger aa" id="valuesYMath2">
+                              <option value="sum" selected="">sum</option>
+                            </select>
+                              <span class="aaof">of</span>
+                              <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(2)">
+                                Choose... 
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown3">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="1">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="1">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="1">ga:user
+                                </button>
+                              </div>
+                            </div>
+                            <div class="">
+                            	<button 
+                                class="btn btn-white option" 
+                                type="button"
+                                onClick="openColorModal(1)"
+                                >
+                                <i class="fa fa-eyedropper"></i>
+                                
+                                </button>
+                            </div>
+                          </div>
+                          <!-- second input end -->
+                          <!-- second input start -->
+                          <div class="d-flex justify-content-between axis-append-div" id="xAxisAppendDiv3">
+                            <input type="text" id="xAxisInputHidden3" class="axis-append-input" placeholder="yAx3">
+                            <select class="form-control selectTrigger aa" id="valuesYMath3">
+                              <option value="sum" selected="">sum</option>
+                            </select>
+                              <span class="aaof">of</span>
+                              <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(3)">
+                                Choose... 
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown2">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="2">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="2">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="2">ga:user
+                                </button>
+                              </div>
+                            </div>
+                            <div class="">
+                              <button 
+                                class="btn btn-white option" 
+                                type="button"
+                                onClick="openColorModal(2)"
+                                >
+                                <i class="fa fa-eyedropper"></i>
+                                </button>
+                            </div>
+                          </div>
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
+                          <div class="d-flex justify-content-between axis-append-div" id="xAxisAppendDiv3">
+                            <input type="text" id="xAxisInputHidden3" class="axis-append-input" placeholder="yAx3">
+                            <select class="form-control selectTrigger aa" id="valuesYMath3">
+                              <option value="sum" selected="">sum</option>
+                            </select>
+                              <span class="aaof">of</span>
+                            <!-- <select 
+                                class="form-control bb" 
+                                id="valuesYColumn1"
+                                onChange="updateChart1(this)"
+                                chartIndex="2">
+                                <option value="11" selected disabled>choose...</option>
+                                <option value="0">sl</option>
+                                <option value="1">ga:session</option>
+                                <option value="2">ga:user</option>
+                            </select> -->
+                            <div class="dropdown select-y-axis-dropdown">
+                              <button class="btn btn-light dropdown-toggle dropdown-btn" type="button" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" onClick="tableShadow(4)">
+                                Choose... 
+                                <!-- <i class="fa fa-angle-down"></i> -->
+                                <i class="fa fa-chevron-down" style="font-size: 10px;"></i>
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdown1">
+                                <button value="0" onclick="updateChart1(this)" class="btn" chartIndex="3">Sl.</button>
+                                <button value="1" onclick="updateChart1(this)" class="btn" chartIndex="3">ga:session</button>
+                                <button value="2" onclick="updateChart1(this)" class="btn" chartIndex="3">ga:user
+                                </button>
+                              </div>
+                            </div>
+                            <div class="">
+                              <button 
+                                class="btn btn-white option" 
+                                type="button"
+                                onClick="openColorModal(3)"
+                                >
+                                <i class="fa fa-eyedropper"></i>
+                                </button>
+                            </div>
+                          </div>
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
+                          <!-- 4th dropdown -->
+                          <!-- second input end -->
+                          <button type="button" id="addYAxisData" class="btn btn-info btn-sm my-1">+ Add value</button>
+                        </div>
+                      </div>
+                      <div class="form-group axis-select">
+                        <label for="valuesX">Values (x-axis)</label>
+                        <div id="xAxisDiv" class="dynamic-axis-append x-axis-parent-div" style="display: none;">
+                        <div class="d-flex justify-content-between">
+                          <select class="form-control bb" id="valuesX" onChange="updateChartX(this)">
+                            <option value="11" selected disabled>choose...</option>
+                            <option value="0">sl</option>
+                            <option value="1">ga:session</option>
+                            <option value="2">ga:user</option>
+                            <option value="3">ga:date</option>
+                          </select>
+                          <span class="aaof">by</span>
+                          <select class="form-control aa" id="valuesX">
+                            <option value="1">Day</option>
+                            <option value="2">Week</option>
+                            <option value="3">Month</option>
+                            <option value="4">Year</option>
+                          </select>
+                          <div class="">
+                            <button data-toggle="dropdown" class="btn btn-white dropdown-toggle option" type="button">
+                              <i class="fa fa-ellipsis-v"></i>
+                            </button>
+                            <ul class="dropdown-menu float-right">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li class="dropdown-divider"></li>
+                                <li>
+                                  <a 
+                                    href="#" 
+                                    class="text-danger">Separated link dasd</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        </div>
+                        <!-- <button type="button" class="btn btn-info mt-1">+ Add value</button> -->
+                        <button type="button" id="addXAxisData" class="btn btn-info btn-sm my-1" onclick="(xAxisDiv())">+ Add value</button>
+<script>
+function xAxisDiv() {
+  $('#xAxisDiv').toggle();
+  $('#addXAxisData').hide();
+}
+// function showXAxisDiv() {
+//   $('#xAxisDiv').toggle();
+//   $('#addXAxisData').show();
+// }
+
+  // function removeYAxisDiv(ea) {
+  //   var aa = $(ea).parent('li').parent('ul').parent('div').parent('div').toggleClass('my-show');
+  //   console.log(aa);
+  // }
+</script>
+<div id="colorModal" class="card modalHide">
+	<form class="demoForm" id="demoForm">
+	<div>
+		<div class="color-div">
+			<div>
+				<input id="colormod1" type="radio" name="colorModal" class="color-pallet" onChange="setChartColor(this)" value="#FF1A66">
+				<label for="colormod1"></label>
+			</div>
+			<div>
+				<input id="colormod2" type="radio" name="colorModal" class="color-pallet" onChange="setChartColor(this)" value="#991AFF">
+				<label for="colormod2"></label>
+			</div>
+			<div>
+				<input id="colormod3" type="radio" name="colorModal" class="color-pallet" onChange="setChartColor(this)" value="#CCFF1A">
+				<label for="colormod3"></label>
+			</div>
+			<div>
+				<input id="colormod4" type="radio" name="colorModal" class="color-pallet" onChange="setChartColor(this)" value="#00E680">
+				<label for="colormod4"></label>
+			</div>
+			<div>
+				<input id="colormod5" type="radio" name="colorModal" class="color-pallet" onChange="setChartColor(this)" value="#1AFF33">
+				<label for="colormod5"></label>
+			</div>
+		</div>
+		<div class="mt-2">
+			<label for="colorInput" class="text-dark">Color Pallet</label>
+			<input id="colorInput" name="colorModal" type="color" class="color-input" onChange="setChartColor(this)" value="#aaffaa">
+		</div>
+		<div class="mt-2">
+			<input 
+				id="colorInput2"
+				name="colorModal"
+				type="text"
+				class="color-input"
+				onKeyUp="setChartColor(this)"
+				placeholder="format #XXXXXX">
+		</div>
+	</div>
+	</form>
+	<div class="card-footer d-flex p-0 justify-content-end">
+		<button 
+			type="button"
+			class="btn btn-sm mt-2 btn-secondary"
+			data-dismiss="modal"
+			onClick="hideModal()">Close</button>
+	</div>
+</div>
+                        <div class="date-range">
+                          <div class="form-group">
+                            <label for="date-range">Date range (by)</label>
+                            <select name="date-range" id="date-range" class="form-control">
+                              <option value="1">Last 3 Months</option>
+                              <option value="1">Last 6 Months</option>
+                              <option value="2">Last 8 Months</option>
+                              <option value="3">Month</option>
+                              <option value="4">Year</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="d-block">
+                          <button 
+                            type="button"
+                            class="btn btn-primary d-none"
+                            onClick="updateChart()">UPDATE CHART</button>
+                        </div>
+                    <!-- </a> -->
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+        <!-- top navbar -->
+        <!-- top navbar -->
+
+        <!-- top navbar -->
+        <!-- top navbar -->
+        <!-- top navbar -->
+        <!-- top navbar -->
+        <!-- top navbar -->
+        <div class="row wrapper border-bottom white-bg page-heading">
+            <div class="col-lg-10">
+                <h2>Chart.js</h2>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a>Graphs</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <strong>Chart</strong>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <input type="number" class="form-contro" id="chartInput" value="20" style="display: none;">
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row canvas-div">
+                <div class="col-12">
+                    <div class="ibox ">
+                        <div class="ibox-title">
+                            <h5>Bar Chart Example</h5>
+                        </div>
+                        <div class="ibox-content">
+                            <div>
+                                <canvas id="barChart" height="140"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row chart-table">
+          <div class="col-12">
+            <div class="ibox ">
+              <div class="ibox-title">
+                <h5>Border Table </h5>
+                <div class="ibox-tools">
+                  <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                  </a>
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                      <i class="fa fa-wrench"></i>
+                  </a>
+                  <ul class="dropdown-menu dropdown-user">
+                    <li><a href="#" class="dropdown-item">Config option 1</a>
+                    </li>
+                    <li><a href="#" class="dropdown-item">Config option 2</a>
+                    </li>
+                  </ul>
+                  <a class="close-link">
+                      <i class="fa fa-times"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="ibox-content">
+                <div class="table-div">
+                  
+                <table class="table table-bordered mb-0 header-table">
+                </table>
+                <table id="data-table" class="table table-bordered">
+                  <thead class="top-thead">
+                    <tr class="thead1 thead-a-1">
+                      <th class="p-0 text-center aaa hover1 btn-tab-11">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">
+                          <i class="fa fa-lock"></i>
+                        </button>
+                      </th>
+                      <th class="p-0 hover2">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">A</button>
+                      </th>
+                      <th class="p-0 hover3">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">B</button>
+                      </th>
+                      <th class="p-0 hover4">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">C</button>
+                      </th>
+                      <th class="p-0 hover5">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">D</button>
+                      </th>
+                      <th class="p-0 hover6">
+                        <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">E</button>
+                      </th>
+                    </tr>
+                  </thead>
+                  <thead class="top-thead2">
+                  <tr class="thead1 thead-a-2">
+                    <th class="p-0 text-center aaa btn-tab-11">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">
+                      <i class="fa fa-lock"></i>
+                      </button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">A</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">B</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">C</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">D</button>
+                    </th>
+                    <th class="p-0 ">
+                      <button type="button" class="btn p-0 m-0 border-0 w-100 btn-tab-11">E</button>
+                    </th>
+                  </tr>
+                </thead>
+                  <thead class="t-title">
+                    <tr>
+                      <th>Sl.</th>
+                      <th>ga:session</th>
+                      <th>ga:user</th>
+                      <th>ga:date</th>
+                      <th>ga:channelGrouping</th>
+                      <th>ga:userType</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>151</td>
+                      <td>11</td>
+                      <td>2019-01-02</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>29</td>
+                      <td>32</td>
+                      <td>2019-01-02</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>56</td>
+                      <td>53</td>
+                      <td>2019-01-03</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>151</td>
+                      <td>74</td>
+                      <td>2019-01-04</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>151</td>
+                      <td>95</td>
+                      <td>2019-01-05</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>151</td>
+                      <td>116</td>
+                      <td>2019-01-06</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <!--  -->
+                    <tr>
+                      <td>8</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-08</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>9</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-09</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>10</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-10</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>11</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-11</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>12</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-12</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>13</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-13</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>14</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-14</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>15</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-22</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>16</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-23</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>17</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-01-24</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>18</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-02</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>19</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-03</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>20</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-11</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>21</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-12</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>22</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-18</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>23</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-19</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>24</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-24</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>25</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-02-25</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>26</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-03-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>27</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-04-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>28</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-05-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>29</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-06-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>30</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-07-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>31</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-08-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>32</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-09-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>33</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-10-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>34</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-11-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>35</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2019-12-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>36</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2020-01-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>37</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2020-02-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>38</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2020-03-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>39</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2020-04-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                    <tr>
+                      <td>40</td>
+                      <td>151</td>
+                      <td>137</td>
+                      <td>2020-05-07</td>
+                      <td>(other)</td>
+                      <td>new visitor</td>
+                    </tr>
+                  </tbody>
+                </table>
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+
+<!-- ChartJS-->
+<script src="js/plugins/chartJs/Chart.min.js"></script>
+<!-- <script src="js/demo/chartjs-demo.js"></script> -->
+<script src="js/demo/new-page.chart.js"></script>
+<script src="js/demo/moment.js"></script>
+<!-- <script>
+$(document).ready(function() {
+	var max_fields      = 10; //maximum input boxes allowed
+	var wrapperY   		= $("#yAxisDiv"); //Fields wrapper
+	var add_buttonY      = $("#addYAxisData"); //Add button ID
+	
+	var y = 0; //initlal text box count
+	$(add_buttonY).click(function(e){ //on add input button click
+		e.preventDefault();
+		if(y < max_fields){ //max input box allowed
+			y++; //text box increment
+			$(wrapperY).append(
+`
+<div class="d-flex justify-content-between axis-append-div" id="xAxisAppendDiv${y}">
+  <input type="text" id="xAxisInputHidden${y}" class="axis-append-input" placeholder="yAx${y}">
+  <select class="form-control selectTrigger aa" id="valuesYMath${y}">
+    <option value="sum" selected="">sum</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option></select>
+    <span class="aaof">of</span>
+    <select class="form-control bb" id="valuesYColumn${y}">
+      <option value="null" selected="">choose...</option>
+      <option value="0">sl</option>
+      <option value="1">ga:session</option>
+      <option value="2">ga:user</option>
+    </select>
+  <div class="">
+    <button
+      data-toggle="dropdown"
+      class="btn btn-white dropdown-toggle option"
+      type="button">
+      <i class="fa fa-ellipsis-v"></i>
+    </button>
+    <ul class="dropdown-menu float-right">
+      <li><a href="#">Action</a></li>
+      <li><a href="#">Another action</a></li>
+      <li><a href="#">Something else here</a></li>
+      <li class="dropdown-divider"></li>
+      <li><a href="#" class="remove_field text-danger">remove</a></li>
+    </ul>
+  </div>
+</div>
+`
+); //add input box
+		}
+	});
+	
+	$(wrapperY).on("click",".remove_field", function(e){ //user click on remove text
+		e.preventDefault(); $(this).parent('li').parent('ul').parent('div').parent('div').remove(); y--;
+  })
+  
+});
+</script> -->
+  
+</body>
+</html>
+<!-- top navbar -->
+<!-- top navbar -->
+<!-- top navbar -->
+<!-- top navbar -->
+<!-- <div class="row border-bottom">
+  <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
+  <div class="navbar-header">
+      <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+      <form role="search" class="navbar-form-custom" action="search_results.html">
+          <div class="form-group">
+              <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+          </div>
+      </form>
+  </div>
+      <ul class="nav navbar-top-links navbar-right">
+          <li>
+              <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+          </li>
+          <li class="dropdown">
+              <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                  <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
+              </a>
+              <ul class="dropdown-menu dropdown-messages">
+                  <li>
+                      <div class="dropdown-messages-box">
+                          <a class="dropdown-item float-left" href="profile.html">
+                              <img alt="image" class="rounded-circle" src="img/a7.jpg">
+                          </a>
+                          <div class="media-body">
+                              <small class="float-right">46h ago</small>
+                              <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
+                              <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                      <div class="dropdown-messages-box">
+                          <a class="dropdown-item float-left" href="profile.html">
+                              <img alt="image" class="rounded-circle" src="img/a4.jpg">
+                          </a>
+                          <div class="media-body ">
+                              <small class="float-right text-navy">5h ago</small>
+                              <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
+                              <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                      <div class="dropdown-messages-box">
+                          <a class="dropdown-item float-left" href="profile.html">
+                              <img alt="image" class="rounded-circle" src="img/profile.jpg">
+                          </a>
+                          <div class="media-body ">
+                              <small class="float-right">23h ago</small>
+                              <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
+                              <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                          </div>
+                      </div>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                      <div class="text-center link-block">
+                          <a href="mailbox.html" class="dropdown-item">
+                              <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
+                          </a>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                  <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
+              </a>
+              <ul class="dropdown-menu dropdown-alerts">
+                  <li>
+                      <a href="mailbox.html" class="dropdown-item">
+                          <div>
+                              <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                              <span class="float-right text-muted small">4 minutes ago</span>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                      <a href="profile.html" class="dropdown-item">
+                          <div>
+                              <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                              <span class="float-right text-muted small">12 minutes ago</span>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                      <a href="grid_options.html" class="dropdown-item">
+                          <div>
+                              <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                              <span class="float-right text-muted small">4 minutes ago</span>
+                          </div>
+                      </a>
+                  </li>
+                  <li class="dropdown-divider"></li>
+                  <li>
+                      <div class="text-center link-block">
+                          <a href="notifications.html" class="dropdown-item">
+                              <strong>See All Alerts</strong>
+                              <i class="fa fa-angle-right"></i>
+                          </a>
+                      </div>
+                  </li>
+              </ul>
+          </li>
+
+
+          <li>
+              <a href="login.html">
+                  <i class="fa fa-sign-out"></i> Log out
+              </a>
+          </li>
+      </ul>
+
+  </nav>
+  </div> -->
