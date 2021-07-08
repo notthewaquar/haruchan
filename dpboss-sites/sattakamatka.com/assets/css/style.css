@@ -78,17 +78,33 @@ body > div {
 .pos-s {
   position: sticky;
   top: 0;
-  background: space;
+  /* background: space; */
   background: #191919;
-  animation: changeBackgroundColor 7s alternate infinite;
+  /* animation: changeBackgroundColor 7s alternate infinite; */
   color: #fff;
   font-weight: 700;
   font-size: 20px;
-  line-height: 40px;
+  line-height: 30px;
   border: 2px solid #fff;
   border-radius: 3px;
   box-shadow: 0 0 10px -5px #000;
   margin: 0 0 10px;
+  background: linear-gradient(    45deg,    #5f86f2,    #a65ff2,    #f25fd0,    #f25f61,    #f2cb5f,    #abf25f,    #5ff281,    #5ff2f0  );
+  background-size: 800% 800%;
+  animation: gradient 10s ease infinite;
+  padding: 10px 0;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 .fz-sm {
   font-size: 14px;
