@@ -13,6 +13,9 @@ body {
   margin: 0;
   margin-bottom: 50px;
 }
+* {
+  box-sizing: border-box;
+}
 div,
 span,
 iframe,
@@ -372,4 +375,29 @@ body > div {
     opacity: 0;
     border-radius: 50%;
   }
+}
+.live-update {
+    display: flex;
+    flex-wrap: wrap;
+}
+.live-update > div {
+    width: 33.33%;
+    padding: 10px 0;
+    box-shadow: 0 0 10px -5px #000;
+}
+.live-update h4 {
+    font-size: 20px;
+    color: whitesmoke;
+}
+.live-update p {
+    margin: 5px 0;
+    font-size: 22px;
+}
+.live-update button {
+    padding: 3px 10px;
+    font-size: 12px;
+    background: #444444;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 1px 2px #222;
 }
