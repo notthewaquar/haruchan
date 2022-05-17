@@ -1,0 +1,90 @@
+:root {
+  --c_width: 520px;
+  --c_height: 300px;
+  --c_light: #f4f4f4;
+}
+body {
+  font-family: sans-serif;
+  background: whitesmoke;
+}
+/* global css */
+.fw-100 {
+  font-weight: 100;
+}
+.fw-200 {
+  font-weight: 200;
+}
+.fw-300 {
+  font-weight: 300;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-800 {
+  font-weight: 800;
+}
+.fw-900 {
+  font-weight: 900;
+}
+/* global css */
+
+.main-card-body {
+  position: relative;
+  margin: 50px auto;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: rgb(255 255 255 / 10%) 0px 1px 1px 0px inset,
+    rgb(50 50 93 / 25%) 0px 50px 100px -20px,
+    rgb(0 0 0 / 30%) 0px 30px 60px -30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.h-card {
+  max-width: var(--c_width);
+  min-width: var(--c_width);
+  min-height: var(--c_height);
+  max-height: var(--c_height);
+}
+.v-card {
+  max-height: var(--c_width);
+  min-height: var(--c_width);
+  min-width: var(--c_height);
+  max-width: var(--c_height);
+}
+/* user name */
+.u-name {
+  color: var(--c_light);
+  font-size: 20px;
+}
+.u-role {
+  color: var(--c_light);
+  font-size: 16px;
+}
+.u-divider {
+  width: 80px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: #fff;
+  margin: 7px 0;
+}
+.u-social {
+}
+.u-link {
+  display: block;
+  text-decoration: none;
+  color: var(--c_light);
+}
+.u-icon {
+}
+.u-link_text {
+}
