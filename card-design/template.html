@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template</title>
+  <link rel="stylesheet" href="./assets/css/card-layout.css" />
+  <link rel="stylesheet" href="./assets/css/b-card.css" />
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+  <style>
+    .c-front .u-logo {
+      text-align: center;
+    }
+
+    .c-front .u-logo img {
+      margin-top: 200px;
+      width: 80px;
+    }
+
+    .c-front .u-name {}
+
+    .c-front .u-name-first {
+      color: #ec2420;
+      text-align: center;
+      margin: 42px 0 10px !important;
+      font-size: 24px;
+      display: block;
+    }
+
+    .c-front .u-role {
+      color: #424141;
+      text-align: center;
+      letter-spacing: 4px;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .c-front .u-link {}
+
+    .c-front .u-link-text {
+      color: #212020;
+      font-size: 14px;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      margin: 30px 0 0;
+    }
+
+    /* back */
+    .c-back .u-name {
+      margin-top: 80px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .c-back .u-name-first {
+      color: #212020;
+    }
+
+    .c-back .u-name-last {
+      color: #e00126;
+    }
+
+    .c-back .u-role {
+      margin: 10px 0 100px;
+      color: #212020;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .c-back .u-link {
+      margin: 0 0 10px;
+    }
+
+    .c-back .u-icon {width: 25px;height: 25px;display: inline-block;background: #212020;border-radius: 30px;text-align: center;align-items: center;padding: 3px 0 0;}
+
+    .c-back .u-icon i {
+      /* padding: 9px 8px 6px 7px; */
+      /* background: #212020; */
+      /* border-radius: 40px; */
+      font-size: 12px;
+    }
+
+    .c-back .u-link-text {
+      font-size: 14px;
+      font-weight: 400;
+    margin-left: 8px;}
+    .c-back a:hover .u-link-text {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-card-body v-card c-front" style="
+        background-image: url(./assets/img/bg/2/front.svg);
+        padding: 50px 30px;
+        border-radius: 0;
+      ">
+    <div class="u-name">
+      <span class="fw-700 u-name-first">CORPORATE NAME</span>
+    </div>
+    <div class="u-role">Solution Manager</div>
+    <div class="u-logo">
+      <img src="./assets/img/bg/2/logo.svg" alt="" class="img-fluid" />
+    </div>
+    <div class="u-social">
+      <a href="#" class="u-link">
+        <span class="u-link-text">www.company-name.com</span>
+      </a>
+    </div>
+  </div>
+  <div class="main-card-body v-card c-back" style="
+        background-image: url(./assets/img/bg/2/back.svg);
+        padding: 50px 30px;
+        border-radius: 0;
+      ">
+    <div class="u-name">
+      <span class="fw-700 u-name-first">MICHAL</span>
+      <span class="fw-400 u-name-last">JOHNS</span>
+    </div>
+    <div class="u-role">Solution Manager</div>
+    <div class="u-social">
+      <a href="#" class="u-link">
+        <span class="u-icon">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </span>
+        <span class="u-link-text">+91 99999 9999</span>
+      </a>
+      <a href="#" class="u-link">
+        <span class="u-icon">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </span>
+        <span class="u-link-text">user@gmail.com</span>
+      </a>
+      <a href="#" class="u-link">
+        <span class="u-icon">
+          <i class="fa fa-link" aria-hidden="true"></i>
+        </span>
+        <span class="u-link-text">website.com</span>
+      </a>
+      <a href="#" class="u-link">
+        <span class="u-icon">
+          <i class="fa fa-map-marker" aria-hidden="true"></i>
+        </span>
+        <span class="u-link-text">Street Address 123</span>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- <div class="u-divider" style="background-color: #02b0eb; margin-bottom: 75px;"></div> -->
