@@ -36,7 +36,15 @@ body {
   font-weight: 900;
 }
 /* global css */
-
+a {
+  transition: all 0.3s;
+}
+.card-wrapper {
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px;
+  margin: auto;
+}
 .main-card-body {
   position: relative;
   margin: 50px auto;
@@ -48,6 +56,20 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+.main-card-body {
+  display: inline-block;
+}
+.main-card-body .c-back {
+  margin-top: 0;
+}
+@media only screen and (max-width: 500px) {
+  .card-wrapper {
+    display: block;
+  }
+  .main-card-body {
+    display: block;
+  }
 }
 .h-card {
   max-width: var(--c_width);

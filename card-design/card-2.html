@@ -15,22 +15,42 @@
     }
 
     .c-front .u-logo img {
-      margin-top: 200px;
-      width: 80px;
+      margin-top: 50px;
+      width: 45px;
     }
 
-    .c-front .u-name {}
+    .v-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px 30px;
+    }
+
+    .c-front .u-name {
+      text-align: center;
+      margin: 22px 0 10px !important;
+      font-size: 20px;
+
+    }
+
+    .c-front span {
+      display: inline-block;
+    }
 
     .c-front .u-name-first {
-      color: #ec2420;
-      text-align: center;
-      margin: 42px 0 10px !important;
-      font-size: 24px;
-      display: block;
+      color: #fff;
+    }
+
+    .c-front .u-name-last {
+      color: #62ab40;
+    }
+
+    .c-front .c-left-div {
+      margin-left: -60px;
     }
 
     .c-front .u-role {
-      color: #424141;
+      color: #c7c7c7;
       text-align: center;
       letter-spacing: 4px;
       font-size: 10px;
@@ -42,17 +62,18 @@
 
     .c-front .u-link-text {
       color: #212020;
-      font-size: 14px;
+      font-size: 12px;
       text-transform: uppercase;
-      text-align: center;
+      text-align: right;
       display: block;
       margin: 30px 0 0;
+      font-weight: 700;
     }
 
     /* back */
     .c-back .u-name {
-      margin-top: 80px;
-      font-size: 30px;
+      margin-top: 0;
+      font-size: 24px;
       text-align: center;
     }
 
@@ -61,30 +82,37 @@
     }
 
     .c-back .u-name-last {
-      color: #e00126;
+      color: #62ab40;
     }
 
     .c-back .u-role {
-      margin: 10px 0 100px;
+      margin: 4px 0 0;
       color: #212020;
       text-align: center;
       text-transform: uppercase;
       font-weight: 600;
+      font-size: 14px;
     }
 
     .c-back .u-link {
       margin: 0 0 10px;
+      display: flex;
+      align-items: center;
     }
 
     .c-back .u-icon {
-      width: 25px;
+      /* width: 25px;
       height: 25px;
       display: inline-block;
       background: #212020;
       border-radius: 30px;
       text-align: center;
       align-items: center;
-      padding: 3px 0 0;
+      padding: 3px 0 0; */
+    }
+
+    .c-back .u-icon img {
+      width: 25px;
     }
 
     .c-back .u-icon i {
@@ -101,7 +129,15 @@
     }
 
     .c-back a:hover .u-link-text {
-      text-decoration: underline;
+      color: #88c53a;
+    }
+
+    .c-back .u-social {
+      margin: 0 0 0 10%;
+    }
+
+    .c-back .c-left-div {
+      margin: 50px 0 0 -80px;
     }
   </style>
 </head>
@@ -109,15 +145,17 @@
 <body>
   <div class="card-wrapper">
     <div class="main-card-body v-card c-front" style="
-        background-image: url(./assets/img/bg/2/front.svg);
-        padding: 50px 30px;
+        background-image: url(./assets/img/digital-card/3/front.svg);
       ">
-      <div class="u-name">
-        <span class="fw-700 u-name-first">CORPORATE NAME</span>
-      </div>
-      <div class="u-role">Solution Manager</div>
-      <div class="u-logo">
-        <img src="./assets/img/bg/2/logo.svg" alt="" class="img-fluid" />
+      <div class="c-left-div">
+        <div class="u-logo">
+          <img src="./assets/img/digital-card/3/logo.svg" alt="" class="img-fluid" />
+        </div>
+        <div class="u-name">
+          <span class="fw-700 u-name-first">CORPORATE</span>
+          <span class="fw-700 u-name-last">NAME</span>
+        </div>
+        <div class="u-role">Solution Manager</div>
       </div>
       <div class="u-social">
         <a href="#" class="u-link">
@@ -126,38 +164,39 @@
       </div>
     </div>
     <div class="main-card-body v-card c-back" style="
-        background-image: url(./assets/img/bg/2/back.svg);
-        padding: 50px 30px;
+        background-image: url(./assets/img/digital-card/3/back.svg);
       ">
-      <div class="u-name">
-        <span class="fw-700 u-name-first">MICHAL</span>
-        <span class="fw-400 u-name-last">JOHNS</span>
+      <div class="c-left-div">
+        <div class="u-name">
+          <span class="fw-700 u-name-first">MICHAL</span>
+          <span class="fw-700 u-name-last">JOHNS</span>
+        </div>
+        <div class="u-role">Solution Manager</div>
       </div>
-      <div class="u-role">Solution Manager</div>
       <div class="u-social">
         <a href="#" class="u-link">
           <span class="u-icon">
-            <i class="fa fa-phone" aria-hidden="true"></i>
+            <img src="./assets/img/digital-card/3/address.svg" alt="">
           </span>
-          <span class="u-link-text">+91 99999 9999</span>
+          <span class="u-link-text">Street Address 123</span>
         </a>
         <a href="#" class="u-link">
           <span class="u-icon">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <img src="./assets/img/digital-card/3/email.svg" alt="">
           </span>
           <span class="u-link-text">user@gmail.com</span>
         </a>
         <a href="#" class="u-link">
           <span class="u-icon">
-            <i class="fa fa-link" aria-hidden="true"></i>
+            <img src="./assets/img/digital-card/3/call.svg" alt="">
           </span>
-          <span class="u-link-text">website.com</span>
+          <span class="u-link-text">+91 99999 99999</span>
         </a>
         <a href="#" class="u-link">
           <span class="u-icon">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <img src="./assets/img/digital-card/3/website.svg" alt="">
           </span>
-          <span class="u-link-text">Street Address 123</span>
+          <span class="u-link-text">www.company-name.com</span>
         </a>
       </div>
     </div>
