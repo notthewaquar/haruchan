@@ -51,7 +51,7 @@
 
     /* back */
     .c-back .u-name {
-      margin-top: 80px;
+      margin-top: 0;
       font-size: 30px;
       text-align: center;
     }
@@ -65,7 +65,7 @@
     }
 
     .c-back .u-role {
-      margin: 10px 0 100px;
+      margin: 10px 0 120px;
       color: #212020;
       text-align: center;
       text-transform: uppercase;
@@ -103,6 +103,20 @@
     .c-back a:hover .u-link-text {
       text-decoration: underline;
     }
+
+    .profile-pic {    width: 100px;
+    height: 100px;
+    text-align: center;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border: 1px solid #870015;
+    box-shadow: 0 0 10px -4px #aeafb1;
+    text-align: center;
+    display: block;
+    margin: -20px auto 10px;}
   </style>
 </head>
 
@@ -129,6 +143,8 @@
         background-image: url(./assets/img/bg/2/back.svg);
         padding: 50px 30px;
       ">
+      <div class="profile-pic" style="background-image: url(./assets/img/digital-card/face/2.jpg);">
+      </div>
       <div class="u-name">
         <span class="fw-700 u-name-first">MICHAL</span>
         <span class="fw-400 u-name-last">JOHNS</span>
