@@ -1,189 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>template</title>
+    <link rel="stylesheet" href="./assets/css/card-layout.css" />
+    <link rel="stylesheet" href="./assets/css/b-card.css" />
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+    <style>
+      .c-front .u-logo {
+        text-align: center;
+      }
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>template</title>
-  <link rel="stylesheet" href="./assets/css/card-layout.css" />
-  <link rel="stylesheet" href="./assets/css/b-card.css" />
-  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
-  <style>
-    .c-front .u-logo {
-      text-align: center;
-    }
+      .c-front .u-logo img {
+        margin-top: 200px;
+        width: 80px;
+      }
 
-    .c-front .u-logo img {
-      margin-top: 200px;
-      width: 80px;
-    }
+      .c-front .u-name {
+      }
 
-    .c-front .u-name {}
+      .c-front .u-name-first {
+        color: #ec2420;
+        text-align: center;
+        margin: 42px 0 10px !important;
+        font-size: 24px;
+        display: block;
+      }
 
-    .c-front .u-name-first {
-      color: #ec2420;
-      text-align: center;
-      margin: 42px 0 10px !important;
-      font-size: 24px;
-      display: block;
-    }
+      .c-front .u-role {
+        color: #424141;
+        text-align: center;
+        letter-spacing: 4px;
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
 
-    .c-front .u-role {
-      color: #424141;
-      text-align: center;
-      letter-spacing: 4px;
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: 700;
-    }
+      .c-front .u-link {
+      }
 
-    .c-front .u-link {}
+      .c-front .u-link-text {
+        color: #212020;
+        font-size: 14px;
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        margin: 30px 0 0;
+      }
 
-    .c-front .u-link-text {
-      color: #212020;
-      font-size: 14px;
-      text-transform: uppercase;
-      text-align: center;
-      display: block;
-      margin: 30px 0 0;
-    }
+      /* back */
+      .c-back .u-name {
+        margin-top: 14px;
+        font-size: 26px;
+        text-align: center;
+      }
 
-    /* back */
-    .c-back .u-name {
-      margin-top: 0;
-      font-size: 30px;
-      text-align: center;
-    }
+      .c-back .u-name-first {
+        color: #212020;
+      }
 
-    .c-back .u-name-first {
-      color: #212020;
-    }
+      .c-back .u-name-last {
+        color: #e00126;
+      }
 
-    .c-back .u-name-last {
-      color: #e00126;
-    }
+      .c-back .u-role {
+        margin: 10px 0 120px;
+        color: #212020;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
 
-    .c-back .u-role {
-      margin: 10px 0 120px;
-      color: #212020;
-      text-align: center;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
+      .c-back .u-link {
+        margin: 0 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+      }
 
-    .c-back .u-link {
-      margin: 0 0 10px;
-    }
+      .c-back .u-icon {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        background: #212020;
+        border-radius: 30px;
+        text-align: center;
+        align-items: center;
+        /* padding: 3px 0 0; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 25px;
+      }
 
-    .c-back .u-icon {
-      width: 25px;
-      height: 25px;
-      display: inline-block;
-      background: #212020;
-      border-radius: 30px;
-      text-align: center;
-      align-items: center;
-      padding: 3px 0 0;
-    }
+      .c-back .u-icon i {
+        /* padding: 9px 8px 6px 7px; */
+        /* background: #212020; */
+        /* border-radius: 40px; */
+        font-size: 12px;
+      }
 
-    .c-back .u-icon i {
-      /* padding: 9px 8px 6px 7px; */
-      /* background: #212020; */
-      /* border-radius: 40px; */
-      font-size: 12px;
-    }
+      .c-back .u-link-text {
+        font-size: 12px;
+        font-weight: 400;
+        margin: 3px 0 0 10px;
+      }
 
-    .c-back .u-link-text {
-      font-size: 14px;
-      font-weight: 400;
-      margin-left: 8px;
-    }
+      .c-back a:hover .u-link-text {
+        text-decoration: underline;
+      }
 
-    .c-back a:hover .u-link-text {
-      text-decoration: underline;
-    }
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        display: inline-block;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        border: 1px solid #870015;
+        box-shadow: 0 0 10px -4px #aeafb1;
+        text-align: center;
+        display: block;
+        margin: -20px auto 10px;
+      }
+    </style>
+  </head>
 
-    .profile-pic {    width: 100px;
-    height: 100px;
-    text-align: center;
-    display: inline-block;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    border: 1px solid #870015;
-    box-shadow: 0 0 10px -4px #aeafb1;
-    text-align: center;
-    display: block;
-    margin: -20px auto 10px;}
-  </style>
-</head>
-
-<body>
-  <div class="card-wrapper">
-    <div class="main-card-body v-card c-front" style="
-        background-image: url(./assets/img/bg/2/front.svg);
-        padding: 50px 30px;
-      ">
-      <div class="u-name">
-        <span class="fw-700 u-name-first">CORPORATE NAME</span>
+  <body>
+    <div class="card-wrapper">
+      <div
+        class="main-card-body v-card c-front"
+        style="
+          background-image: url(./assets/img/bg/2/front.svg);
+          padding: 50px 30px;
+        "
+      >
+        <div class="u-name">
+          <span class="fw-700 u-name-first">Alladin's Lamp</span>
+        </div>
+        <div class="u-role">Paste-up worker</div>
+        <div class="u-logo">
+          <img src="./assets/img/bg/2/logo.svg" alt="" class="img-fluid" />
+        </div>
+        <div class="u-social">
+          <a href="#" class="u-link">
+            <span class="u-link-text">www.alladinslamp.com</span>
+          </a>
+        </div>
       </div>
-      <div class="u-role">Solution Manager</div>
-      <div class="u-logo">
-        <img src="./assets/img/bg/2/logo.svg" alt="" class="img-fluid" />
-      </div>
-      <div class="u-social">
-        <a href="#" class="u-link">
-          <span class="u-link-text">www.company-name.com</span>
-        </a>
+      <div
+        class="main-card-body v-card c-back"
+        style="
+          background-image: url(./assets/img/bg/2/back.svg);
+          padding: 50px 30px;
+        "
+      >
+        <div
+          class="profile-pic"
+          style="background-image: url(./assets/img/digital-card/face/2.jpg)"
+        ></div>
+        <div class="u-name">
+          <span class="fw-700 u-name-first">Charlotte</span>
+          <span class="fw-400 u-name-last">J. Plante</span>
+        </div>
+        <div class="u-role">Solution Manager</div>
+        <div class="u-social">
+          <a href="#" class="u-link">
+            <span class="u-icon">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+            </span>
+            <span class="u-link-text"
+              >583 Vine Street Arlington Heights, IL 60004</span
+            >
+          </a>
+          <a href="#" class="u-link">
+            <span class="u-icon">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            </span>
+            <span class="u-link-text">+42 847-632-5833</span>
+          </a>
+          <a href="#" class="u-link">
+            <span class="u-icon">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+            </span>
+            <span class="u-link-text">CharlotteJPlante@dayrep.com</span>
+          </a>
+          <a href="#" class="u-link">
+            <span class="u-icon">
+              <i class="fa fa-link" aria-hidden="true"></i>
+            </span>
+            <span class="u-link-text">www.caapdesign.com</span>
+          </a>
+        </div>
       </div>
     </div>
-    <div class="main-card-body v-card c-back" style="
-        background-image: url(./assets/img/bg/2/back.svg);
-        padding: 50px 30px;
-      ">
-      <div class="profile-pic" style="background-image: url(./assets/img/digital-card/face/2.jpg);">
-      </div>
-      <div class="u-name">
-        <span class="fw-700 u-name-first">MICHAL</span>
-        <span class="fw-400 u-name-last">JOHNS</span>
-      </div>
-      <div class="u-role">Solution Manager</div>
-      <div class="u-social">
-        <a href="#" class="u-link">
-          <span class="u-icon">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-          </span>
-          <span class="u-link-text">+91 99999 9999</span>
-        </a>
-        <a href="#" class="u-link">
-          <span class="u-icon">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-          </span>
-          <span class="u-link-text">user@gmail.com</span>
-        </a>
-        <a href="#" class="u-link">
-          <span class="u-icon">
-            <i class="fa fa-link" aria-hidden="true"></i>
-          </span>
-          <span class="u-link-text">website.com</span>
-        </a>
-        <a href="#" class="u-link">
-          <span class="u-icon">
-            <i class="fa fa-map-marker" aria-hidden="true"></i>
-          </span>
-          <span class="u-link-text">Street Address 123</span>
-        </a>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
 
 <!-- <div class="u-divider" style="background-color: #02b0eb; margin-bottom: 75px;"></div> -->
-
 
 <!-- same file for front-back
 custom card editor (background, font family, color, icons, icon color)
