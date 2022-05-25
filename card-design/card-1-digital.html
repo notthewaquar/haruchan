@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>template</title>
+  <link rel="stylesheet" href="./assets/css/card-layout.css" />
+  <link rel="stylesheet" href="./assets/css/b-card.css" />
+  <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
+  <style>
+    .c-front .u-logo {
+      text-align: center;
+    }
+
+    .c-front .u-logo img {
+      margin-top: 0;
+      width: 55px;
+    }
+
+    .v-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 25px 30px;
+    }
+
+    .c-front .u-name {
+      text-align: center;
+      margin: 0 0 6px !important;
+      font-size: 18px;
+    }
+
+    .c-front span {
+      display: inline-block;
+    }
+
+    .c-front .u-name-first {
+      color: #ffffff;
+    }
+
+    .c-front .u-name-last {
+      color: #ffffff;
+      font-weight: 400;
+    }
+
+    .c-front .c-left-div {
+      margin-left: 0;
+      display: flex;
+      align-items: center;
+      margin: 0 0 80px;
+      justify-content: space-around;
+    }
+
+    .c-front .u-role {
+      color: #dedede;
+      text-align: center;
+      letter-spacing: 2px;
+      font-size: 10px;
+      text-transform: uppercase;
+      font-weight: 400;
+    }
+
+    .c-front .u-link {}
+
+    .c-front .u-link-text {
+      color: #2a2b2f;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-align: right;
+      display: block;
+      margin: 5px 0 0;
+      font-weight: 600;
+    }
+
+    /* back */
+    .c-back .u-name {
+      margin-top: 0;
+      font-size: 24px;
+      text-shadow: 1px 1px 2px #1c1c1c;
+    }
+
+    .c-back .u-name-first {
+      color: #ffffff;
+    }
+
+    .c-back .u-name-last {
+      color: #c32035;
+    }
+
+    .c-back .u-role {
+      margin: 4px 0 0;
+      color: #d6d6d6;
+
+      text-transform: uppercase;
+      font-weight: 400;
+      font-size: 14px;
+    }
+
+    .c-back .u-link {
+      margin: 0 0 3px;
+      display: flex;
+      align-items: center;
+      color: #828da6;
+    }
+
+    .c-back .u-icon {
+      /* width: 25px;
+      height: 25px;
+      display: inline-block;
+      background: #212020;
+      border-radius: 30px;
+      text-align: center;
+      align-items: center;
+      padding: 3px 0 0; */
+    }
+
+    .c-back .u-icon img {
+      width: 20px;
+    }
+
+    .c-back .u-icon i {
+      /* padding: 9px 8px 6px 7px; */
+      /* background: #212020; */
+      /* border-radius: 40px; */
+      font-size: 12px;
+    }
+
+    .c-back .u-link-text {
+      font-size: 11px;
+      font-weight: 400;
+      margin-left: 8px;
+    }
+
+    .c-back a:hover .u-link-text {
+      color: #00535e;
+    }
+
+    .c-back .u-social {
+      margin: 0 0 2px 0px;
+    }
+
+    .c-back .c-left-div {
+      margin: -2px 0 0 0;
+      text-align: right;
+      position: relative;
+      /* left: 40px; */
+    }
+
+    .profile-pic {
+      width: 80px;
+      height: 80px;
+      text-align: center;
+      display: inline-block;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 400px;
+      border: 1px solid #fff;
+      box-shadow: 0 0 10px -4px #000;
+      margin: 0 0 1px;
+    }
+
+    .bottom-social-row {
+      display: flex;
+      justify-content: space-between;
+      margin: -10px 0 10px;
+    }
+
+    .bottom-social-row a {
+      background: #c32035;
+      width: 25px;
+      height: 25px;
+      color: white;
+      font-size: 14px;
+      border-radius: 90px;
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .bottom-social-row a:hover {
+      transform: rotate(360deg);
+      box-shadow: 0 0 10px -4px #000
+    }
+
+    .bottom-social-row a i {}
+  </style>
+</head>
+
+<body>
+  <div class="card-wrapper">
+    <!-- <div
+        class="main-card-body v-card c-front"
+        style="background-image: url(./assets/img/digital-card/5/front.png)"
+      >
+        <div class="u-social">
+          <a href="#" class="u-link">
+            <span class="u-link-text">www.paulinewsanchez.com</span>
+          </a>
+        </div>
+        <div class="c-left-div">
+          <div class="u-logo">
+            <img
+              src="./assets/img/digital-card/5/logo.png"
+              alt=""
+              class="img-fluid"
+            />
+          </div>
+          <div>
+            <div class="u-name">
+              <span class="fw-700 u-name-first">Hjorth </span>
+              <span class="fw-700 u-name-last">& Würtz</span>
+            </div>
+            <div class="u-role">Executive Assistant</div>
+          </div>
+        </div>
+      </div> -->
+    <div class="main-card-body v-card c-back" style="background-image: url(./assets/img/digital-card/5/back.png)">
+      <div class="c-left-div">
+        <div class="profile-pic" style="background-image: url(./assets/img/digital-card/face/5.jpg)"></div>
+        <div class="u-name">
+          <span class="fw-700 u-name-first">Pauline </span>
+          <span class="fw-700 u-name-last">W. Sanchez</span>
+        </div>
+        <div class="u-role">Executive Assistant</div>
+      </div>
+      <div style="text-align: center;     margin: 30px 0 30px;">
+        <img src="./assets/img/temp-qr.png" alt="" style="    width: 60px;
+          height: auto;
+          display: block;
+          margin: auto;
+          border-radius: 5px;
+          box-shadow: 0 0 10px -5px #000;">
+        <img src="./assets/img/g-pay.png" alt="" style="    width: auto;
+          height: 28px;
+          display: block;
+          margin: auto;
+          background: #fff;
+          border-radius: 5px;
+          padding: 6px 20px;
+          margin: 5px auto 0;
+          box-shadow: 0 0 10px -5px #000;">
+      </div>
+      <div class="u-social">
+        <a href="#" class="u-link">
+          <span class="u-icon">
+            <img src="./assets/img/digital-card/5/home.png" alt="" />
+          </span>
+          <span class="u-link-text">3906 Riverside Drive Augusta, GA 30902</span>
+        </a>
+        <a href="#" class="u-link">
+          <span class="u-icon">
+            <img src="./assets/img/digital-card/5/email.png" alt="" />
+          </span>
+          <span class="u-link-text">PaulineWSanchez@dayrep.com</span>
+        </a>
+        <a href="#" class="u-link">
+          <span class="u-icon">
+            <img src="./assets/img/digital-card/5/phone.png" alt="" />
+          </span>
+          <span class="u-link-text">+91 706-832-9122</span>
+        </a>
+        <a href="#" class="u-link">
+          <span class="u-icon">
+            <img src="./assets/img/digital-card/5/website.png" alt="" />
+          </span>
+          <span class="u-link-text">www.paulinewsanchez.com</span>
+        </a>
+      </div>
+      <div class="bottom-social-row">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-whatsapp"></i></a>
+        <a href="#"><i class="fa fa-map"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- <div class="u-divider" style="background-color: #02b0eb; margin-bottom: 75px;"></div> -->
+
+<!-- same file for front-back
+custom card editor (background, font family, color, icons, icon color)
+re design dashboard -->
