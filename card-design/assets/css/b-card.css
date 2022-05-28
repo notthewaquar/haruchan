@@ -1,6 +1,6 @@
 :root {
-  --c_width: 520px;
-  --c_height: 300px;
+  --c_width: 300px;
+  --c_height: 550px;
   --c_light: #f4f4f4;
 }
 body {
@@ -70,18 +70,25 @@ a {
   .main-card-body {
     display: block;
   }
+  .v-card {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
 }
-.h-card {
+/* .h-card {
   max-width: var(--c_width);
   min-width: var(--c_width);
   min-height: var(--c_height);
   max-height: var(--c_height);
-}
+} */
 .v-card {
-  max-height: var(--c_width);
-  min-height: var(--c_width);
-  min-width: var(--c_height);
-  max-width: var(--c_height);
+  max-height: var(--c_height);
+  min-height: var(--c_height);
+  min-width: var(--c_width);
+  max-width: var(--c_width);
 }
 /* user name */
 .u-name {
@@ -109,4 +116,15 @@ a {
 .u-icon {
 }
 .u-link_text {
+}
+.water-mark-dev:after {
+  display: block;
+  content: "thecardsking.com";
+  position: absolute;
+  top: auto;
+  left: 50%;
+  bottom: 5px;
+  font-size: 9px;
+  transform: translateX(-50%);
+  color: #f1f1f1;
 }
