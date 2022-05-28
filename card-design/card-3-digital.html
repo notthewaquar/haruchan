@@ -9,15 +9,6 @@
     <link rel="stylesheet" href="./assets/css/b-card.css" />
     <link rel="stylesheet" href="./assets/css/font-awesome.min.css" />
     <style>
-      .c-front .u-logo {
-        text-align: center;
-      }
-
-      .c-front .u-logo img {
-        margin-top: 40px;
-        width: 55px;
-      }
-
       .v-card {
         display: flex;
         flex-direction: column;
@@ -25,80 +16,35 @@
         padding: 25px 30px;
       }
 
-      .c-front .u-name {
-        text-align: center;
-        margin: 22px 0 10px !important;
-        font-size: 18px;
-      }
-
-      .c-front span {
-        display: inline-block;
-      }
-
-      .c-front .u-name-first {
-        color: #20242d;
-      }
-
-      .c-front .u-name-last {
-        color: #20242d;
-        font-weight: 400;
-      }
-
-      .c-front .c-left-div {
-        margin-left: 60px;
-      }
-
-      .c-front .u-role {
-        color: #515151;
-        text-align: center;
-        letter-spacing: 2px;
-        font-size: 11px;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-
-      .c-front .u-link {
-      }
-
-      .c-front .u-link-text {
-        color: #ffffff;
-        font-size: 12px;
-        text-transform: uppercase;
-        text-align: right;
-        display: block;
-        margin: 30px 0 0;
-        font-weight: 500;
-      }
-
       /* back */
       .c-back .u-name {
         margin-top: 0;
-        font-size: 24px;
-        text-align: center;
+        font-size: 19px;
+        text-shadow: 1px 1px 2px #20242d;
       }
 
       .c-back .u-name-first {
-        color: #1fb3c5;
+        color: #ffffff;
       }
 
       .c-back .u-name-last {
-        color: #ffffff;
+        color: #1fb3c5;
       }
 
       .c-back .u-role {
         margin: 4px 0 0;
-        color: #e1e1e1;
-        text-align: center;
+        color: #f4f4f4;
+
         text-transform: uppercase;
-        font-weight: 400;
-        font-size: 14px;
+        font-weight: 500;
+        font-size: 12px;
       }
 
       .c-back .u-link {
-        margin: 0 0 10px;
+        margin: 0 0 3px;
         display: flex;
         align-items: center;
-        color: #828da6;
+        color: #20242d;
       }
 
       .c-back .u-icon {
@@ -113,7 +59,7 @@
       }
 
       .c-back .u-icon img {
-        width: 25px;
+        width: 20px;
       }
 
       .c-back .u-icon i {
@@ -124,7 +70,7 @@
       }
 
       .c-back .u-link-text {
-        font-size: 14px;
+        font-size: 11px;
         font-weight: 400;
         margin-left: 8px;
       }
@@ -134,56 +80,64 @@
       }
 
       .c-back .u-social {
-        margin: 0 0 0 0;
+        margin: 0 0 2px 0px;
       }
 
       .c-back .c-left-div {
-        margin: -2px 0 0 -89px;
-        text-align: center;
+        /* margin: -2px 0 0 -89px; */
+        text-align: left;
       }
 
       .profile-pic {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         text-align: center;
         display: inline-block;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         border-radius: 400px;
-        border: 1px solid #607d8b;
+        border: 1px solid #fff;
         box-shadow: 0 0 10px -4px #000;
         margin: 0 0 1px;
+      }
+
+      .bottom-social-row {
+        display: flex;
+        justify-content: space-between;
+        margin: -10px 0 0;
+      }
+
+      .bottom-social-row a {
+        box-shadow: 0 0 10px -4px #000;
+        background: #b0f6ff;
+        width: 25px;
+        height: 25px;
+        color: #20242d;
+        font-size: 14px;
+        border-radius: 90px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .bottom-social-row a:hover {
+        transform: rotate(360deg);
+        box-shadow: 0 0 10px -6px #000;
+      }
+
+      .bottom-social-row a i {
+        margin-top: 3px;
+      }
+      .water-mark-dev {
+        color: #20242d;
       }
     </style>
   </head>
 
   <body>
     <div class="card-wrapper">
-      <div
-        class="main-card-body v-card c-front"
-        style="background-image: url(./assets/img/digital-card/4/front.png)"
-      >
-        <div class="c-left-div">
-          <div class="u-logo">
-            <img
-              src="./assets/img/digital-card/4/logo.png"
-              alt=""
-              class="img-fluid"
-            />
-          </div>
-          <div class="u-name">
-            <span class="fw-700 u-name-first">Tech </span>
-            <span class="fw-700 u-name-last">Hifi</span>
-          </div>
-          <div class="u-role">Personal care aide</div>
-        </div>
-        <div class="u-social">
-          <a href="#" class="u-link">
-            <span class="u-link-text">www.monsterdiver.com</span>
-          </a>
-        </div>
-      </div>
       <div
         class="main-card-body v-card c-back"
         style="background-image: url(./assets/img/digital-card/4/back.png)"
@@ -197,14 +151,44 @@
             <span class="fw-700 u-name-first">Nicole</span>
             <span class="fw-700 u-name-last">P. Jensen</span>
           </div>
-          <div class="u-role">Personal care aide</div>
+          <div class="u-role">PERSONAL CARE AIDE</div>
+          <div class="u-role" style="font-size: 10px">Tech Hifi</div>
+        </div>
+        <div style="text-align: center; margin: 30px 0 30px">
+          <img
+            src="./assets/img/temp-qr.png"
+            alt=""
+            style="
+              width: 60px;
+              height: auto;
+              display: block;
+              margin: auto;
+              border-radius: 5px;
+              box-shadow: 0 0 10px -5px #000;
+            "
+          />
+          <img
+            src="./assets/img/g-pay.png"
+            alt=""
+            style="
+              width: auto;
+              height: 28px;
+              display: block;
+              margin: auto;
+              background: #fff;
+              border-radius: 5px;
+              padding: 6px 20px;
+              margin: 5px auto 0;
+              box-shadow: 0 0 10px -5px #000;
+            "
+          />
         </div>
         <div class="u-social">
           <a href="#" class="u-link">
             <span class="u-icon">
               <img src="./assets/img/digital-card/4/home.png" alt="" />
             </span>
-            <span class="u-link-text">	720 W Southwest Loop 323</span>
+            <span class="u-link-text"> 720 W Southwest Loop 323</span>
           </a>
           <a href="#" class="u-link">
             <span class="u-icon">
@@ -225,9 +209,15 @@
             <span class="u-link-text">www.monsterdiver.com</span>
           </a>
         </div>
+        <div class="bottom-social-row">
+          <a href="#"><i class="fa fa-instagram"></i></a>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-whatsapp"></i></a>
+          <a href="#"><i class="fa fa-map"></i></a>
+          <a href="#"><i class="fa fa-youtube"></i></a>
+        </div>
+        <a href="#" class="water-mark-dev">Developed by thecardsking.com</a>
       </div>
     </div>
   </body>
 </html>
-
- 
