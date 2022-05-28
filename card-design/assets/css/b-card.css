@@ -117,14 +117,14 @@ a {
 }
 .u-link_text {
 }
-.water-mark-dev:after {
-  display: block;
-  content: "thecardsking.com";
+.water-mark-dev {
   position: absolute;
+  text-decoration: none;
   top: auto;
   left: 50%;
   bottom: 5px;
   font-size: 9px;
   transform: translateX(-50%);
-  color: #f1f1f1;
+  color: #ffffff;
+  opacity: 0.9;
 }
