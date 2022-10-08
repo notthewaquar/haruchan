@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Responsive contact form</title>
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section id="contact">
+  <div class="contact-box">
+    <div class="contact-links">
+      <h2 class="title-1">Joey adoption form</h2>
+      <p class="para-1">Joey is an incredibly joyful and a friendly pet.Joey loves to play and never misses the opportunity for a good walk.Joey is looking for new shelter.Do you wanna adopt Joey?Fill up this form and we will contact you regarding this ASAP.</p>
+      <div class="links">
+        <img src="./assets/img/1.jpg" alt="">
+      </div>
+      <p class="para-2">We are getting a lot of requests for Joey's adoption. Fill up the form fast to adopt him first.</p>
+    </div>
+    <div class="contact-form-wrapper">
+      <form>
+        <div class="form-item">
+          <label>Name:</label>
+          <input type="text" placeholder="Please enter name" required>
+        </div>
+        <div class="form-item">
+          <label>Phone number:</label>
+          <input type="text" placeholder="Please enter phone number" required>
+        </div>
+        <div class="form-item">
+          <label>Pin Code:</label>
+          <input type="text" placeholder="Please enter pin code" required>
+        </div>
+        <div class="form-item">
+          <label>Please tick mark Previous or current dog owner?</label>
+          <div class="check-div">
+            <label for="prev_dog">
+              <input id="prev_dog" type="radio" name="dog_owner" value="previous" checked>&nbsp;Previous
+            </label>
+            <span>&nbsp;&nbsp;</span>
+            <label for="curr_dog">
+              <input id="curr_dog" type="radio" name="dog_owner" value="current">&nbsp;Current
+            </label>
+          </div>
+        </div>
+        <div class="form-item">
+          <label>Please provide details regarding breed age etc in text section below.</label>
+          <textarea class="" rows="4" name="message" placeholder="Please share you pet description" required></textarea>
+        </div>
+        <div class="form-item">
+          <label>Any other questions or comments you may enter here.</label>
+          <textarea class="" rows="4" name="message" placeholder="Please share your query" required></textarea>
+        </div>
+        <div class="form-item">
+          <label>Link to photo video folder.</label>
+          <input type="text" placeholder="Paste the URL" required>
+        </div>
+        <div class="form-item">
+          <label>Link to vaccination record.</label>
+          <input type="text" placeholder="Paste the URL" required>
+        </div>
+        <div class="form-item">
+          <label>Link to deworming record.</label>
+          <input type="text" placeholder="Paste the URL" required>
+        </div>
+        <div class="form-item">
+          <label>Age of your pet</label>
+          <input type="date" id="birthday" name="birthday" class="age-of-pet-date">
+        </div>
+        <div class="form-item">
+          <div class="check-div">
+            <input id="walk" type="checkbox" name="walk_dog" value="previous" style="width: auto;">
+            <label for="walk">
+              &nbsp;Two times walking is necessary.
+            </label>            
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="check-div">
+            <input id="health" type="checkbox" name="health_dog" value="previous" style="width: auto;">
+            <label for="health">
+              &nbsp;Proper health with all vaccinations done and regular vet checkups - record available. 
+            </label>            
+          </div>
+        </div>
+        <div class="form-item">
+          <div class="check-div">
+            <input id="diet" type="checkbox" name="diet_dog" value="previous" style="width: auto;">
+            <label for="diet">
+              &nbsp;
+              Diet - mix of kibbles and home food (rice curd chicken etc.)
+            </label>            
+          </div>
+        </div>
+        <button class="submit-btn">Send</button>  
+      </form>
+    </div>
+  </div>
+</section>
+<!-- partial -->
+</body>
+</html>
