@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Remnant: From the Ashes World Analyzer</title>
+
+  <style>
+    /* || General CSS */
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #212121;
+      color: #f5f5f5;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 5vh;
+      width: 100%;
+      text-align: center;
+    }
+
+    h2 {
+      width: 50%;
+      margin-left: 25%;
+    }
+
+    .info button:hover {
+      cursor: pointer;
+    }
+
+    p {
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* || Upload drop CSS */
+
+    #drop-area {
+      padding: 40px 15px;
+      margin: 10px calc(25vw);
+      outline: 2px dashed #829ab1;
+      outline-offset: -10px;
+      /* background-color: #334e68;*/
+      background-color: #3b3b3b;
+      text-align: center;
+    }
+
+    #drop-area.is-dragover {
+      background-color: #626262;
+    }
+
+    .upload-icon {
+      width: 100%;
+      height: 80px;
+      /* fill: #92b0b3; */
+      fill: #9fb3cb;
+      display: block;
+    }
+
+    .upload-label {
+      font-weight: 700;
+      /* color: #e5edf1; */
+      color: #f5f5f5;
+      /* background-color: #627d9b; */
+      background-color: #486581;
+      padding: 8px 16px;
+      margin: 40px auto 0;
+      border: 1px solid #f5f5f5;
+      border-radius: 10px;
+      font-size: 20px;
+    }
+
+    .upload-label:hover,
+    .upload-label:focus {
+      background-color: #243b53;
+    }
+
+    #upload-input {
+      width: 0.1px;
+      height: 0.1px;
+      opacity: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .upload-text {
+      text-align: center;
+      font-size: 25px;
+      margin: 30px 20px;
+    }
+
+    /* || Filter CSS */
+
+    .clear-button {
+      width: 27px;
+      height: 34px;
+      margin: 5px;
+      padding-left: 6px;
+    }
+
+    label {
+      font-size: 24px;
+      white-space: pre;
+    }
+
+    #filters .button {
+      height: 32px;
+      margin-left: 0;
+      width: 100%;
+      border-radius: 5px;
+      font-size: 24px;
+      padding: 4px 10px;
+      border: none;
+      margin: 20px 40px 20px 0px;
+    }
+
+    .half-button {
+      height: 32px;
+      margin-left: 0;
+      width: 48%;
+      border-radius: 5px;
+      font-size: 24px;
+      padding: 4px 10px;
+      border: none;
+      margin: 0px !important;
+    }
+
+    #select-filters {
+      border: 2px solid black;
+      padding: 10px;
+    }
+
+    #filters {
+      position: fixed;
+      right: calc(75vw);
+      display: none;
+      width: 320px;
+      top: 15vh;
+    }
+
+    /* || Tables CSS */
+
+    .table-container {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    #chances,
+    .piece-table {
+      font-family: 'Roboto', sans-serif;
+      border-collapse: collapse;
+      width: 50%;
+      margin-left: calc(25vw);
+      font-size: 20px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #303030;
+    }
+
+    .hidden-tables {
+      display: none;
+    }
+
+    .error-message {
+      display: none;
+      margin-top: 40px;
+      width: 100%;
+      font-size: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    #chances td,
+    #chances th,
+    .piece-table td,
+    .piece-table th {
+      border: 1px solid #ddd;
+      padding: 8px;
+      white-space: pre;
+    }
+
+
+    /* .piece-table tr:nth-child(even)  {
+  background-color: #f2f2f2;
+  color: #343a40;
+}*/
+
+    #chances th,
+    .piece-table th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: center;
+      background-color: #486581;
+      color: #f5f5f5;
+    }
+
+    /* || Tabs CSS */
+
+    .tabs {
+      overflow: hidden;
+      /*border: 1px solid #ccc;
+  background-color: #5e5b5b;*/
+
+      list-style-type: none;
+      margin: 30px 0 0 0;
+      padding: 0 0 0.3em 0;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Style the buttons inside the tab */
+    .tabs button {
+      background-color: #3b3b3b;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      padding: 14px 16px;
+      transition: 0.3s;
+      font-size: 17px;
+      border: 1px solid #ccc;
+      color: #f5f5f5;
+
+      /* display: inline; 
+  color: #42454a; 
+  background-color: #dedbde; 
+  border: 1px solid #c9c3ba;
+  border-bottom: none; 
+  padding: 0.3em; 
+  text-decoration: none;*/
+    }
+
+    /* Change background color of buttons on hover */
+    .tabs button:hover {
+      background-color: #334e68;
+    }
+
+    /* Create an active/current tablink class */
+    .tab-links.active {
+      background-color: #486581;
+    }
+
+    /* Style the tab content */
+    .tab-content {
+      display: none;
+      /* padding: 6px 12px; */
+      -webkit-animation: fadeEffect 1s;
+      animation: fadeEffect 1s;
+    }
+
+    .tab-content p {
+      width: 100%;
+    }
+
+    #tab-credits {
+      margin-top: 40px;
+      width: 100%;
+      font-size: 20px;
+      padding-bottom: 20px;
+      text-align: center;
+    }
+
+    /* Fade in tabs */
+    @-webkit-keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeEffect {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    /*
+.tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
+.tabs button { display: inline; color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
+.tabs button:hover { background-color: #f1f0ee; }
+.tabs button.active { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
+.tab-content { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
+*/
+
+    /* || Select dropdown CSS */
+
+    *,
+    *:after,
+    *:before {
+      box-sizing: border-box;
+    }
+
+
+    .custom-select-wrapper {
+      position: relative;
+      user-select: none;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 300px;
+    }
+
+    .custom-select {
+      display: flex;
+      flex-direction: column;
+      border-width: 0 2px 0 2px;
+      border-style: solid;
+      /* border-color: #394a6d; */
+      border-color: #7e7e7e;
+    }
+
+    .custom-select__trigger {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 22px;
+      font-size: 20px;
+      font-weight: 300;
+      height: 60px;
+      line-height: 60px;
+      /* color: #3b3b3b;
+  background: #f5f5f5; */
+      color: #f5f5f5;
+      /* background: #486581; */
+      background: #3b3b3b;
+      cursor: pointer;
+      border-width: 2px 0 2px 0;
+      border-style: solid;
+      /* border-color: #394a6d; */
+      border-color: #7e7e7e;
+    }
+
+    .custom-options {
+      position: absolute;
+      display: block;
+      top: 100%;
+      left: 0;
+      right: 0;
+      /* border: 2px solid #394a6d; */
+      border: 2px solid #7e7e7e;
+      border-top: 0;
+      /* background: #fff; */
+      /* background: #486581; */
+      background: #3b3b3b;
+      color: #f5f5f5;
+      transition: all 0.5s;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .custom-select.open .custom-options {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: all;
+    }
+
+    .custom-option {
+      position: relative;
+      display: block;
+      padding: 0 22px 0 22px;
+      font-size: 22px;
+      font-weight: 300;
+      /* color: #3b3b3b; */
+      color: #f5f5f5;
+      line-height: 60px;
+      cursor: pointer;
+      transition: all 0.5s;
+    }
+
+    .custom-option:hover {
+      cursor: pointer;
+      /* background-color: #b2b2b2; */
+      /* background-color: #334e68; */
+      background-color: #515151;
+    }
+
+    .custom-option.selected {
+      color: #f5f5f5;
+      /* background-color: #305c91; */
+      /* background-color: #243b53; */
+      background-color: #262626;
+    }
+
+    .custom-select-label {
+      margin: 20px 0px;
+      text-align: center;
+      font-size: 20px;
+    }
+
+    /* arrow dropdown */
+
+    .arrow {
+      position: relative;
+      height: 15px;
+      width: 15px;
+    }
+
+    .arrow::before,
+    .arrow::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 0.15rem;
+      height: 100%;
+      transition: all 0.5s;
+    }
+
+    .arrow::before {
+      left: -5px;
+      transform: rotate(45deg);
+      /* background-color: #394a6d; */
+      background-color: #f5f5f5;
+    }
+
+    .arrow::after {
+      left: 5px;
+      transform: rotate(-45deg);
+      /* background-color: #394a6d; */
+      background-color: #f5f5f5;
+    }
+
+    .open .arrow::before {
+      left: -5px;
+      transform: rotate(-45deg);
+    }
+
+    .open .arrow::after {
+      left: 5px;
+      transform: rotate(45deg);
+    }
+
+    /* || Input Search CSS */
+
+    .search-container {
+      position: relative;
+      margin-top: 40px;
+      margin-bottom: 10px;
+      padding: 0;
+      align-self: self-end;
+      display: none;
+    }
+
+    #search-input {
+      height: 30px;
+      margin: 0;
+      padding-left: 40px;
+      background: #3b3b3b;
+      color: #f5f5f5;
+      font-size: 17px;
+      border: 1px solid #7e7e7e;
+    }
+
+    .search-icon {
+      position: absolute;
+      /*bottom:8px;*/
+      left: 5px;
+      width: 25px;
+      height: 30px;
+      fill: #7e7e7e;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+    <table id="tab-campaign-char0" class="piece-table campaign-mode" style="position: relative;"><thead style="position: sticky;top: 0;left: 0;"><tr class="header-row"><th class="headerSort" role="columnheader button">Location</th><th class="headerSort" role="columnheader button">Event Type</th><th class="headerSort" role="columnheader button">Event Name</th><th class="headerSort" role="columnheader button">Missing Items</th></tr></thead><tbody><tr><td>Earth: Ward 13</td><td>Home</td><td>Ward 13</td><td>Weapon: Coachgun
+Weapon: Hatchet
+Armor: Cultist (Body)
+Armor: Cultist (Head)
+Armor: Cultist (Legs)
+Weapon: HuntingRifle
+Weapon: Sword
+Armor: Hunter (Body)
+Armor: Hunter (Head)
+Armor: Hunter (Legs)
+Weapon: Shotgun
+Armor: Scrapper (Body)
+Armor: Scrapper (Head)
+Armor: Scrapper (Legs)
+Weapon: Hammer
+Trait: ElderKnowledge
+Weapon: Submachinegun
+Trinket: RingOfTheAdmiral</td></tr><tr><td>Earth: Fairview</td><td>Point of Interest</td><td>Founder's Hideout</td><td>Armor: Drifter (Body)
+Armor: Drifter (Legs)</td></tr><tr><td>Earth: Fairview: Junktown</td><td>Side Dungeon</td><td>Mad Merchant</td><td>Armor: TwistedMask (Head)</td></tr><tr><td>Earth: Fairview: The Hidden Sanctum</td><td>Miniboss</td><td>Shroud</td><td>Mod: Rattleweed</td></tr><tr><td>Earth: Fairview: The Hidden Sanctum</td><td>Item Drop</td><td>Trait Book</td><td></td></tr><tr><td>Earth: Fairview: The Hidden Sanctum</td><td>Item Drop</td><td>Stockpile Circlet</td><td>Trinket: StockpileCirclet</td></tr><tr><td>Earth: Fairview: The Hidden Sanctum</td><td>Item Drop</td><td>Reggies Ring</td><td>Trait: Scavenger</td></tr><tr><td>Earth: Fairview</td><td>Point of Interest</td><td>Settlement</td><td></td></tr><tr><td>Earth: Chapel Station</td><td>Item Drop</td><td>Aggressors Bane</td><td>Trinket: AggressorsBane</td></tr><tr><td>Earth: Chapel Station: Church of the Harbinger</td><td>Siege</td><td>Root Mother</td><td>Trait: MothersBlessing
+Weapon: SniperRifle</td></tr><tr><td>Earth: Westcourt: Research Station Alpha</td><td>Miniboss</td><td>Riphide</td><td>Armor: Leto (Head)
+Armor: Leto (Body)
+Armor: Leto (Legs)
+Mod: FlickerCloak</td></tr><tr><td>Earth: Westcourt: Research Station Alpha</td><td>Item Drop</td><td>Sage Stone</td><td>Trinket: Sagestone</td></tr><tr><td>Earth: Westcourt: Research Station Alpha</td><td>Item Drop</td><td>Simulacrum</td><td></td></tr><tr><td>Earth: Westcourt: Hidden Grotto</td><td>Side Dungeon</td><td>Hunters Hideout</td><td>Weapon: HuntingPistol
+Trait: ShadowWalker</td></tr><tr><td>Earth: Westcourt: Hidden Grotto</td><td>Item Drop</td><td>Burden Of The Gambler</td><td>Trinket: BurdenOfTheGambler</td></tr><tr><td>Earth: Westcourt</td><td>Point of Interest</td><td>Mud Tooth</td><td>Trinket: BrabusPocketWatch</td></tr><tr><td>Earth: Westcourt: The Choking Hollow</td><td>World Boss</td><td>The Ent</td><td>Weapon: SporeLauncher
+Weapon: PetrifiedMaul
+Trait: QuickHands
+Emote: Cheer</td></tr><tr><td>Rhom: The Eastern Wind: The Ardent Temple</td><td>Miniboss</td><td>Shade And Shatter</td><td>Mod: VeilOfTheBlackTear</td></tr><tr><td>Rhom: The Eastern Wind: The Ardent Temple</td><td>Item Drop</td><td>Trait Book</td><td></td></tr><tr><td>Rhom: The Eastern Wind: The Ardent Temple</td><td>Item Drop</td><td>Talisman Of Animosity</td><td>Trinket: TalismanOfAnimosity</td></tr><tr><td>Rhom: The Eastern Wind: Vault Of The Heralds</td><td>Side Dungeon</td><td>Armor Vault</td><td>Armor: Akari (Head)
+Armor: Akari (Body)
+Armor: Akari (Legs)</td></tr><tr><td>Rhom: The Eastern Wind: Vault Of The Heralds</td><td>Item Drop</td><td>Gravity Stone</td><td>Trinket: GravityStone</td></tr><tr><td>Rhom: The Eastern Wind</td><td>Point of Interest</td><td>Wud And Ancient Construct</td><td>Trinket: JewelOfTheBlackSun
+Trinket: MendersCharm
+Armor: Osseous (Head)
+Armor: Osseous (Body)
+Armor: Osseous (Legs)
+Mod: IronSentinel
+Mod: VeryGoodBoy</td></tr><tr><td>Rhom: The Scouring Waste: Loom Of The Black Sun</td><td>World Boss</td><td>Claviger</td><td>Weapon: WorldBreaker
+Weapon: ParticleAccelerator
+Trait: Recovery
+Emote: Laugh</td></tr><tr><td>Rhom: The Scouring Waste: Loom Of The Black Sun</td><td>Item Drop</td><td>Hunters Halo</td><td>Trinket: HuntersHalo</td></tr><tr><td>Rhom: The Scouring Waste: Loom Of The Black Sun</td><td>Item Drop</td><td>Simulacrum</td><td></td></tr><tr><td>Rhom: The Scouring Waste: Shackled Canyon</td><td>Miniboss</td><td>Raze</td><td>Mod: Beckon</td></tr><tr><td>Rhom: The Scouring Waste: Shackled Canyon</td><td>Item Drop</td><td>Brutal Mark</td><td>Trinket: BrutalMark</td></tr><tr><td>Rhom: The Scouring Waste: Concourse Of The Sun</td><td>Siege</td><td>The Lost Gantry</td><td>Weapon: BeamRifle</td></tr><tr><td>Rhom: The Scouring Waste: Concourse Of The Sun</td><td>Item Drop</td><td>Galenic Charm</td><td>Trinket: GalenicCharm</td></tr><tr><td>Rhom: The Scouring Waste</td><td>Point of Interest</td><td>Monolith</td><td>Armor: Void (Head)
+Armor: Void (Body)
+Armor: Void (Legs)</td></tr><tr><td>Rhom: The Scouring Waste</td><td>Item Drop</td><td>Burden Of The Reckless</td><td>Trinket: BurdenOfTheReckless</td></tr><tr><td>Rhom: Undying Throne</td><td>World Boss</td><td>Undying King</td><td>Weapon: Ruin
+Trait: Kingslayer
+Weapon: Riven
+Emote: Gravedigger</td></tr><tr><td>Corsus: The Fetid Glade: The Fetid Glade</td><td>World Boss</td><td>The Unclean One</td><td>Weapon: Devastator
+Weapon: ButchersFlail
+Trait: Glutton
+Emote: Exhausted</td></tr><tr><td>Corsus: The Fetid Glade: The Fetid Glade</td><td>Item Drop</td><td>Devouring Loop</td><td>Trinket: DevouringLoop</td></tr><tr><td>Corsus: The Fetid Glade: The Fetid Glade</td><td>Item Drop</td><td>Simulacrum</td><td></td></tr><tr><td>Corsus: The Mist Fen</td><td>Point of Interest</td><td>Iskal Queen</td><td>Weapon: Scythe
+Weapon: Crossbow
+Armor: Slayer (Head)
+Armor: Slayer (Body)
+Armor: Slayer (Legs)</td></tr><tr><td>Corsus: The Mist Fen: The Grotto</td><td>World Boss</td><td>Ixillis</td><td>Weapon: HiveCannon
+Weapon: GuardianAxe
+Trait: Executioner
+Emote: Confused</td></tr><tr><td>Corsus: The Mist Fen: Needle Lair</td><td>Miniboss</td><td>Barbed Terror</td><td>Mod: UnstableQuills</td></tr><tr><td>Corsus: The Mist Fen: Needle Lair</td><td>Item Drop</td><td>Trait Book</td><td></td></tr><tr><td>Corsus: The Mist Fen: Needle Lair</td><td>Item Drop</td><td>Razor Stone</td><td>Trinket: Razorstone</td></tr><tr><td>Corsus: The Mist Fen: Needle Lair</td><td>Item Drop</td><td>Butchers Fetish</td><td>Trinket: ButchersFetish</td></tr><tr><td>Yaesha: The Verdant Strand: Forgotten Undercroft</td><td>Side Dungeon</td><td>Blink Thief</td><td>Weapon: RicochetRifle
+Trinket: CelerityStone</td></tr><tr><td>Yaesha: The Verdant Strand: Forgotten Undercroft</td><td>Item Drop</td><td>Trait Book</td><td></td></tr><tr><td>Yaesha: The Verdant Strand</td><td>Point of Interest</td><td>Ruins</td><td></td></tr><tr><td>Yaesha: The Verdant Strand</td><td>Item Drop</td><td>Hunters Band</td><td>Trinket: HuntersBand</td></tr><tr><td>Yaesha: Shrine of the Immortals</td><td>Siege</td><td>Fight With The Rebels</td><td>Trait: Triage</td></tr><tr><td>Yaesha: The Scalding Glade: Withering Village</td><td>Miniboss</td><td>Scald And Sear</td><td>Mod: WildfireShot</td></tr><tr><td>Yaesha: The Scalding Glade: Withering Village</td><td>Item Drop</td><td>Keepers Ring</td><td>Trinket: KeepersRing</td></tr><tr><td>Yaesha: The Scalding Glade: Widow's Pass</td><td>Miniboss</td><td>Onslaught</td><td>Mod: BlinkToken</td></tr><tr><td>Yaesha: The Scalding Glade: Widow's Pass</td><td>Item Drop</td><td>Stalkers Brand</td><td>Trinket: StalkersBrand</td></tr><tr><td>Yaesha: The Scalding Glade: The Tempest Court</td><td>World Boss</td><td>Totem Father</td><td>Trait: ArcaneStrike
+Weapon: EyeOfTheStorm
+Weapon: VoiceOfTheTempest
+Emote: TeaTime</td></tr><tr><td>Yaesha: The Scalding Glade</td><td>Item Drop</td><td>Pearl Of Luminescence</td><td>Trinket: PearlOfLuminescence</td></tr><tr><td>Yaesha: The Scalding Glade</td><td>Item Drop</td><td>Simulacrum</td><td></td></tr><tr><td>Yaesha: The Scalding Glade</td><td>Point of Interest</td><td>Flautist</td><td>Trinket: HeartOfTheWolf
+Trait: Swiftness</td></tr><tr><td>Earth: Ward 17</td><td>World Boss</td><td>The Dreamer</td><td>Weapon: Repulsor
+Trait: MindsEye
+Emote: PraiseTheGun</td></tr></tbody><tfoot></tfoot></table>
+  </div>
+</body>
+
+</html>
