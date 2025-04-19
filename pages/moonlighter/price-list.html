@@ -9,16 +9,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
 
     <title>Moonlighter | Price list</title>
+
+    <style>
+      .dropdown-divider {
+        margin: 30px 0 20px;
+      }
+      table p {
+        margin: 0;
+        padding: 0;
+        font-size: 10px;
+      }
+      table hr {
+        display: none;
+      }
+    </style>
   </head>
-  <body class="text-light pt-3 pb-5" style="background-color: #272b2f !important">
-    <div class="container-fluid">
-      <div class="card bg-dark p-3">
+  <body class="text-light pt-3" style="background-color: #272b2f !important; padding-bottom: 100px">
+    <div class="container-fluid fixed-bottom">
+      <div class="bg-secondary card p-3">
         <div class="form-group">
           <label for="search">Search</label>
-          <input id="search" type="text" class="form-control" placerholder="Enter text...">
+          <input id="search" type="text" class="form-control" placeholder="Enter text..." />
         </div>
       </div>
-      </div>
+    </div>
     <div class="container-fluid">
       <h4>Golem Dungeon</h4>
       <p>All items are of the Golem Culture unless otherwise noted.</p>
@@ -26,265 +40,199 @@
         <thead>
           <tr>
             <th scope="col"><p>Name</p></th>
-            <th scope="col">
-              <p><strong>Perfect Price</strong></p>
-            </th>
-            <th scope="col">
-              <p><strong>Crafting Material?</strong></p>
-            </th>
-            <th scope="col">
-              <p><strong>Max Stack</strong></p>
-            </th>
+            <th scope="col">Perfect Price</th>
+            <th scope="col">Crafting Material?</th>
+            <th scope="col">Max Stack</th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ancient Pot</strong></p>
-            </td>
-            <td><p>110G</p></td>
+            <td>Ancient Pot</td>
+            <td>110G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Sword</strong></p>
-            </td>
-            <td><p>165G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Broken Sword</td>
+            <td>165G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Crystal Rock</strong></p>
-            </td>
-            <td><p>83G</p></td>
+            <td>Crystal Rock</td>
+            <td>83G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Crystalized Energy</strong></p>
-            </td>
-            <td><p>110G</p></td>
+            <td>Crystalized Energy</td>
+            <td>110G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric</strong></p>
-            </td>
-            <td><p>275G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Fabric</td>
+            <td>275G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Foundry Rests</strong></p>
-            </td>
-            <td><p>165G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Foundry Rests</td>
+            <td>165G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Glass Lenses</strong></p>
-            </td>
-            <td><p>110G</p></td>
+            <td>Glass Lenses</td>
+            <td>110G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Gold Runes</strong></p>
-            </td>
-            <td><p>330G</p></td>
+            <td>Gold Runes</td>
+            <td>330G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Chisel</strong></p>
-            </td>
-            <td><p>550G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Golem Chisel</td>
+            <td>550G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Core</strong></p>
-            </td>
-            <td><p>110G</p></td>
+            <td>Golem Core</td>
+            <td>110G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Designs I</strong></p>
-            </td>
-            <td><p>1,650G</p></td>
+            <td>Golem Designs I</td>
+            <td>1,650G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Designs II</strong></p>
-            </td>
-            <td><p>1,650G</p></td>
+            <td>Golem Designs II</td>
+            <td>1,650G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Designs III</strong></p>
-            </td>
-            <td><p>1,650G</p></td>
+            <td>Golem Designs III</td>
+            <td>1,650G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem History I</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
+            <td>Golem History I</td>
+            <td>2,750G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem History II</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
+            <td>Golem History II</td>
+            <td>2,750G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem History III</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
+            <td>Golem History III</td>
+            <td>2,750G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem King Energy Crystal</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
+            <td>Golem King Energy Crystal</td>
+            <td>2,750G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem King Jottings</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
+            <td>Golem King Jottings</td>
+            <td>2,750G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Volume</strong></p>
-            </td>
-            <td><p>440G</p></td>
+            <td>Golem Volume</td>
+            <td>440G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel</strong></p>
-            </td>
-            <td><p>330G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Hardened Steel</td>
+            <td>330G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Bar</strong></p>
-            </td>
-            <td><p>28G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Iron Bar</td>
+            <td>28G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Old Golem Minion Design</strong></p>
-            </td>
-            <td><p>440G</p></td>
+            <td>Old Golem Minion Design</td>
+            <td>440G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Root</td>
+            <td>6G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
             <td>
-              <p><strong>Root </strong></p>
-            </td>
-            <td><p>6G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
-          </tr>
-          <tr>
-            <td>
-              <p><strong>Rich Jelly </strong></p>
+              Rich Jelly
               <hr />
               <p>This is from the Merchant Culture</p>
             </td>
-            <td><p>6G</p></td>
+            <td>6G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Rune Tool</strong></p>
-            </td>
-            <td><p>1,650G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Rune Tool</td>
+            <td>1,650G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Teethstone</strong></p>
-            </td>
-            <td><p>6G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Teethstone</td>
+            <td>6G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Vine </strong></p>
-            </td>
-            <td><p>3G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Vine</td>
+            <td>3G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Water Lamp</strong></p>
-            </td>
-            <td><p>275G</p></td>
+            <td>Water Lamp</td>
+            <td>275G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Water Sphere </strong></p>
-            </td>
-            <td><p>110G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Water Sphere</td>
+            <td>110G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Whetstone</strong></p>
-            </td>
-            <td><p>17G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Whetstone</td>
+            <td>17G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>White Stone</strong></p>
-            </td>
-            <td><p>275G</p></td>
+            <td>White Stone</td>
+            <td>275G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
         </thead>
       </table>
@@ -301,246 +249,188 @@
             <th scope="col"><p>Max Stack</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ancient Wood </strong></p>
-            </td>
-            <td><p>1,100G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Ancient Wood</td>
+            <td>1,100G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Blade Leaves</strong></p>
-            </td>
-            <td><p>330G</p></td>
+            <td>Blade Leaves</td>
+            <td>330G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Botany Jottings I</strong></p>
-            </td>
-            <td><p>2,200G</p></td>
+            <td>Botany Jottings I</td>
+            <td>2,200G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Botany Jottings II</strong></p>
-            </td>
-            <td><p>2,200G</p></td>
+            <td>Botany Jottings II</td>
+            <td>2,200G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Botany Jottings III</strong></p>
-            </td>
-            <td><p>2,200G</p></td>
+            <td>Botany Jottings III</td>
+            <td>2,200G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Carnivorous Mutae Jottings</strong></p>
-            </td>
-            <td><p>5,500G</p></td>
+            <td>Carnivorous Mutae Jottings</td>
+            <td>5,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Carnivorous Mutae Seeds</strong></p>
-            </td>
-            <td><p>5,500G</p></td>
+            <td>Carnivorous Mutae Seeds</td>
+            <td>5,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fertile Soil</strong></p>
-            </td>
-            <td><p>1,100G</p></td>
+            <td>Fertile Soil</td>
+            <td>1,100G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fertilizer</strong></p>
-            </td>
-            <td><p>1,100G</p></td>
+            <td>Fertilizer</td>
+            <td>1,100G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fluid Vessel</strong></p>
-            </td>
-            <td><p>1,705G</p></td>
+            <td>Fluid Vessel</td>
+            <td>1,705G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Forest Fruits</strong></p>
-            </td>
-            <td><p>1,980G</p></td>
+            <td>Forest Fruits</td>
+            <td>1,980G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Forest History I</strong></p>
-            </td>
-            <td><p>5,500G</p></td>
+            <td>Forest History I</td>
+            <td>5,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Forest History II</strong></p>
-            </td>
-            <td><p>5,500G</p></td>
+            <td>Forest History II</td>
+            <td>5,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Forest History III</strong></p>
-            </td>
-            <td><p>5,500G</p></td>
+            <td>Forest History III</td>
+            <td>5,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Life Fluid</strong></p>
-            </td>
-            <td><p>440G</p></td>
+            <td>Life Fluid</td>
+            <td>440G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Light Essence</strong></p>
-            </td>
-            <td><p>440G</p></td>
+            <td>Light Essence</td>
+            <td>440G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Magic Mushroom</strong></p>
-            </td>
-            <td><p>66G</p></td>
+            <td>Magic Mushroom</td>
+            <td>66G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Magic Wood </strong></p>
-            </td>
-            <td><p>110G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Magic Wood</td>
+            <td>110G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Modified Seeds</strong></p>
-            </td>
-            <td><p>935G</p></td>
+            <td>Modified Seeds</td>
+            <td>935G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Nutritive Water</strong></p>
-            </td>
-            <td><p>1,925G</p></td>
+            <td>Nutritive Water</td>
+            <td>1,925G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Old Bulb </strong></p>
-            </td>
-            <td><p>2,200G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Old Bulb</td>
+            <td>2,200G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Petals</strong></p>
-            </td>
-            <td><p>110G</p></td>
+            <td>Petals</td>
+            <td>110G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Plant Flesh</strong></p>
-            </td>
-            <td><p>66G</p></td>
+            <td>Plant Flesh</td>
+            <td>66G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Preserved Root </strong></p>
-            </td>
-            <td><p>660G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Preserved Root</td>
+            <td>660G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Pure Acid</strong></p>
-            </td>
-            <td><p>440G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Pure Acid</td>
+            <td>440G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Speed Powder</strong></p>
-            </td>
-            <td><p>2,200G</p></td>
+            <td>Speed Powder</td>
+            <td>2,200G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Straw</td>
+            <td>550G</td>
+            <td>✓</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Strong Leaves</td>
+            <td>440G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
             <td>
-              <p><strong>Straw</strong></p>
-            </td>
-            <td><p>550G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
-          </tr>
-          <tr>
-            <td>
-              <p><strong>Strong Leaves </strong></p>
-            </td>
-            <td><p>440G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
-          </tr>
-          <tr>
-            <td>
-              <p><strong>Venom Jelly </strong></p>
+              Venom Jelly
               <hr />
               <p>This is from the Merchant Culture</p>
             </td>
-            <td><p>22G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>22G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Venomous Spores</strong></p>
-            </td>
-            <td><p>66G</p></td>
+            <td>Venomous Spores</td>
+            <td>66G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
         </thead>
       </table>
@@ -557,214 +447,164 @@
             <th scope="col"><p>Max Stack</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Chilled Lava</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
+            <td>Chilled Lava</td>
+            <td>2,750G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Cloth Dye</strong></p>
-            </td>
-            <td><p>3,025G</p></td>
+            <td>Cloth Dye</td>
+            <td>3,025G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert History I</strong></p>
-            </td>
-            <td><p>16,500G</p></td>
+            <td>Desert History I</td>
+            <td>16,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert History II</strong></p>
-            </td>
-            <td><p>16,500G</p></td>
+            <td>Desert History II</td>
+            <td>16,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert History III</strong></p>
-            </td>
-            <td><p>16,500G</p></td>
+            <td>Desert History III</td>
+            <td>16,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert Rope</strong></p>
-            </td>
-            <td><p>495G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Desert Rope</td>
+            <td>495G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert Steel Ingot</strong></p>
-            </td>
-            <td><p>8,250G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Desert Steel Ingot</td>
+            <td>8,250G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert Steel Sheet</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
+            <td>Desert Steel Sheet</td>
+            <td>2,750G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert Stone</strong></p>
-            </td>
-            <td><p>2,970G</p></td>
+            <td>Desert Stone</td>
+            <td>2,970G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Diamagnetic Sand</strong></p>
-            </td>
-            <td><p>550G</p></td>
+            <td>Diamagnetic Sand</td>
+            <td>550G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Fire Gem</td>
+            <td>1,870G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
             <td>
-              <p><strong>Fire Gem</strong></p>
-            </td>
-            <td><p>1,870G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
-          </tr>
-          <tr>
-            <td>
-              <p><strong>Fire Jelly </strong></p>
+              Fire Jelly
               <hr />
               <p>This is from the Merchant Culture</p>
             </td>
-            <td><p>110G</p></td>
+            <td>110G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fireproof Cloth</strong></p>
-            </td>
-            <td><p>1,265G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Fireproof Cloth</td>
+            <td>1,265G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Flammable Dust</strong></p>
-            </td>
-            <td><p>440G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Flammable Dust</td>
+            <td>440G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fluid Conduct</strong></p>
-            </td>
-            <td><p>4,015G</p></td>
+            <td>Fluid Conduct</td>
+            <td>4,015G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>High Levitation Core</strong></p>
-            </td>
-            <td><p>16,500G</p></td>
+            <td>High Levitation Core</td>
+            <td>16,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Inflammable Liquid</strong></p>
-            </td>
-            <td><p>4,950G</p></td>
+            <td>Inflammable Liquid</td>
+            <td>4,950G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Insulating Dust</strong></p>
-            </td>
-            <td><p>2,255G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Insulating Dust</td>
+            <td>2,255G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Magnetic Core</strong></p>
-            </td>
-            <td><p>330G</p></td>
+            <td>Magnetic Core</td>
+            <td>330G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Magnetic Tool</strong></p>
-            </td>
-            <td><p>7,150G</p></td>
+            <td>Magnetic Tool</td>
+            <td>7,150G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Magnetite</strong></p>
-            </td>
-            <td><p>880G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Magnetite</td>
+            <td>880G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Naja Jottings</strong></p>
-            </td>
-            <td><p>16,500G</p></td>
+            <td>Naja Jottings</td>
+            <td>16,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Resistant Glass</strong></p>
-            </td>
-            <td><p>4,730G</p></td>
+            <td>Resistant Glass</td>
+            <td>4,730G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Soldering Iron</strong></p>
-            </td>
-            <td><p>5,885G</p></td>
+            <td>Soldering Iron</td>
+            <td>5,885G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Thermo Magnetic Engine</strong></p>
-            </td>
-            <td><p>10,120G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Thermo Magnetic Engine</td>
+            <td>10,120G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Volcanic Stone</strong></p>
-            </td>
-            <td><p>110G</p></td>
+            <td>Volcanic Stone</td>
+            <td>110G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
         </thead>
       </table>
@@ -781,206 +621,158 @@
             <th scope="col"><p>Max Stack</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>AC Adapter</strong></p>
-            </td>
-            <td><p>17,105G</p></td>
+            <td>AC Adapter</td>
+            <td>17,105G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Argon Bottle</strong></p>
-            </td>
-            <td><p>13,255G</p></td>
+            <td>Argon Bottle</td>
+            <td>13,255G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Battery</strong></p>
-            </td>
-            <td><p>3,135G</p></td>
+            <td>Broken Battery</td>
+            <td>3,135G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Conductor Metal</strong></p>
-            </td>
-            <td><p>660G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Conductor Metal</td>
+            <td>660G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Copper Reel</strong></p>
-            </td>
-            <td><p>8,250G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Copper Reel</td>
+            <td>8,250G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Crystal Shards</strong></p>
-            </td>
-            <td><p>550G</p></td>
+            <td>Crystal Shards</td>
+            <td>550G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
             <td>
-              <p><strong>Electric Jelly </strong></p>
+              Electric Jelly
               <hr />
               <p>This is from the Merchant Culture</p>
             </td>
-            <td><p>440G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>440G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Energy Capacitor</strong></p>
-            </td>
-            <td><p>4,950G</p></td>
+            <td>Energy Capacitor</td>
+            <td>4,950G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Flux Energy Jottings</strong></p>
-            </td>
-            <td><p>26,400G</p></td>
+            <td>Flux Energy Jottings</td>
+            <td>26,400G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Gold Strands </strong></p>
-            </td>
-            <td><p>2,310G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Gold Strands</td>
+            <td>2,310G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Mercury</strong></p>
-            </td>
-            <td><p>1,705G</p></td>
+            <td>Mercury</td>
+            <td>1,705G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Plastic Film</strong></p>
-            </td>
-            <td><p>2,420G</p></td>
+            <td>Plastic Film</td>
+            <td>2,420G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Power Supply</strong></p>
-            </td>
-            <td><p>16,005G</p></td>
+            <td>Power Supply</td>
+            <td>16,005G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Tech History I</strong></p>
-            </td>
-            <td><p>26,400G</p></td>
+            <td>Tech History I</td>
+            <td>26,400G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Tech History II</strong></p>
-            </td>
-            <td><p>26,400G</p></td>
+            <td>Tech History II</td>
+            <td>26,400G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Tech History III</strong></p>
-            </td>
-            <td><p>26,400G</p></td>
+            <td>Tech History III</td>
+            <td>26,400G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Tesla Coil Engine</strong></p>
-            </td>
-            <td><p>5,500G</p></td>
+            <td>Tesla Coil Engine</td>
+            <td>5,500G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Treated Wood</strong></p>
-            </td>
-            <td><p>5,665G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Treated Wood</td>
+            <td>5,665G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Triple Cell Battery </strong></p>
-            </td>
-            <td><p>11,000G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Triple Cell Battery</td>
+            <td>11,000G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Tungsten Reel</strong></p>
-            </td>
-            <td><p>9,460G</p></td>
+            <td>Tungsten Reel</td>
+            <td>9,460G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Vacuum Tube</strong></p>
-            </td>
-            <td><p>7,590G</p></td>
+            <td>Vacuum Tube</td>
+            <td>7,590G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Welding Gun</strong></p>
-            </td>
-            <td><p>12,815G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Welding Gun</td>
+            <td>12,815G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Welding Rods</strong></p>
-            </td>
-            <td><p>3,740G</p></td>
+            <td>Welding Rods</td>
+            <td>3,740G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Wires </strong></p>
-            </td>
-            <td><p>2,805G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Wires</td>
+            <td>2,805G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Wolfram Rock </strong></p>
-            </td>
-            <td><p>6,985G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Wolfram Rock</td>
+            <td>6,985G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
         </thead>
       </table>
@@ -997,172 +789,130 @@
             <th scope="col"><p>Max Stack</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ancient Sacred Volume</strong></p>
-            </td>
-            <td><p>19,883G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Ancient Sacred Volume</td>
+            <td>19,883G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Bomb Detonator</strong></p>
-            </td>
-            <td><p>8,498G</p></td>
+            <td>Bomb Detonator</td>
+            <td>8,498G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Bone Fragment</strong></p>
-            </td>
-            <td><p>2,558G</p></td>
+            <td>Bone Fragment</td>
+            <td>2,558G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Carbon Fiber Plate</strong></p>
-            </td>
-            <td><p>4,703G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Carbon Fiber Plate</td>
+            <td>4,703G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Coins</strong></p>
-            </td>
-            <td><p>12,540G</p></td>
+            <td>Coins</td>
+            <td>12,540G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Desert Lava Idol</strong></p>
-            </td>
-            <td><p>24,007G</p></td>
+            <td>Desert Lava Idol</td>
+            <td>24,007G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Dimensional Garbage </strong></p>
-            </td>
-            <td><p>12,540G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Dimensional Garbage</td>
+            <td>12,540G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Dimensional Fungus</strong></p>
-            </td>
-            <td><p>12,540G</p></td>
+            <td>Dimensional Fungus</td>
+            <td>12,540G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Dimensional Res. Mineral Ore</strong></p>
-            </td>
-            <td><p>12,540G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Dimensional Res. Mineral Ore</td>
+            <td>12,540G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Dimensional Resistant Metal</strong></p>
-            </td>
-            <td><p>8,498G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Dimensional Resistant Metal</td>
+            <td>8,498G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Dimensional Resistant Glass </strong></p>
-            </td>
-            <td><p>19,883G</p></td>
+            <td>Dimensional Resistant Glass</td>
+            <td>19,883G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Forest Wood Figure</strong></p>
-            </td>
-            <td><p>24,007G</p></td>
+            <td>Forest Wood Figure</td>
+            <td>24,007G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fossil Bone </strong></p>
-            </td>
-            <td><p>12,540G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Fossil Bone</td>
+            <td>12,540G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Statue</strong></p>
-            </td>
-            <td><p>24,007G</p></td>
+            <td>Golem Statue</td>
+            <td>24,007G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Heavy Metal Plates </strong></p>
-            </td>
-            <td><p>4,703G</p></td>
-            <td><p>✓</p></td>
-            <td><p>10</p></td>
+            <td>Heavy Metal Plates</td>
+            <td>4,703G</td>
+            <td>✓</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Jewels </strong></p>
-            </td>
-            <td><p>19,883G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Jewels</td>
+            <td>19,883G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Monster Skull</strong></p>
-            </td>
-            <td><p>2,558G</p></td>
+            <td>Monster Skull</td>
+            <td>2,558G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Plastic Cloth</strong></p>
-            </td>
-            <td><p>4,703G</p></td>
+            <td>Plastic Cloth</td>
+            <td>4,703G</td>
             <td></td>
-            <td><p>10</p></td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Small Spectral Flame</strong></p>
-            </td>
-            <td><p>4,703G</p></td>
-            <td><p>✓</p></td>
-            <td><p>5</p></td>
+            <td>Small Spectral Flame</td>
+            <td>4,703G</td>
+            <td>✓</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Toxic Liquid</strong></p>
-            </td>
-            <td><p>2,558G</p></td>
+            <td>Toxic Liquid</td>
+            <td>2,558G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Tech Recycled Metal Ball</strong></p>
-            </td>
-            <td><p>24,007G</p></td>
+            <td>Tech Recycled Metal Ball</td>
+            <td>24,007G</td>
             <td></td>
-            <td><p>5</p></td>
+            <td>5</td>
           </tr>
         </thead>
       </table>
@@ -1180,221 +930,159 @@
             <th scope="col"><p>Max Stack</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Club</strong></p>
-            </td>
-            <td><p>330G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Club</td>
+            <td>330G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Crossbow</strong></p>
-            </td>
-            <td><p>11,000G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Crossbow</td>
+            <td>11,000G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Dagger</strong></p>
-            </td>
-            <td><p>22,000G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Dagger</td>
+            <td>22,000G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Katana</strong></p>
-            </td>
-            <td><p>2,200G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Katana</td>
+            <td>2,200G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Mace</strong></p>
-            </td>
-            <td><p>330G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Mace</td>
+            <td>330G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Morningstar</strong></p>
-            </td>
-            <td><p>11,000G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Morningstar</td>
+            <td>11,000G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Rapier</strong></p>
-            </td>
-            <td><p>2,200G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Rapier</td>
+            <td>2,200G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Sling</strong></p>
-            </td>
-            <td><p>330G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Sling</td>
+            <td>330G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broken Whip</strong></p>
-            </td>
-            <td><p>22,000G</p></td>
-            <td><p>1</p></td>
+            <td>Broken Whip</td>
+            <td>22,000G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Empowering Crystal</strong></p>
-            </td>
-            <td><p>110G</p></td>
-            <td><p>5</p></td>
+            <td>Empowering Crystal</td>
+            <td>110G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Electric Jelly</strong></p>
-            </td>
-            <td><p>440G</p></td>
-            <td><p>10</p></td>
+            <td>Electric Jelly</td>
+            <td>440G</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fire Jelly</strong></p>
-            </td>
-            <td><p>110G</p></td>
-            <td><p>10</p></td>
+            <td>Fire Jelly</td>
+            <td>110G</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Rich Jelly</strong></p>
-            </td>
-            <td><p>6G</p></td>
-            <td><p>10</p></td>
+            <td>Rich Jelly</td>
+            <td>6G</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Venom Jelly</strong></p>
-            </td>
-            <td><p>22G</p></td>
-            <td><p>10</p></td>
+            <td>Venom Jelly</td>
+            <td>22G</td>
+            <td>10</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Guidance Desert Potion</strong></p>
-            </td>
-            <td><p>8,800G</p></td>
-            <td><p>5</p></td>
+            <td>Guidance Desert Potion</td>
+            <td>8,800G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Guidance Forest Potion</strong></p>
-            </td>
-            <td><p>2,750G</p></td>
-            <td><p>5</p></td>
+            <td>Guidance Forest Potion</td>
+            <td>2,750G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Guidance Golem Potion</strong></p>
-            </td>
-            <td><p>440G</p></td>
-            <td><p>5</p></td>
+            <td>Guidance Golem Potion</td>
+            <td>440G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Guidance Tech Potion</strong></p>
-            </td>
-            <td><p>17,600G</p></td>
-            <td><p>5</p></td>
+            <td>Guidance Tech Potion</td>
+            <td>17,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion I</strong></p>
-            </td>
-            <td><p>138G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion I</td>
+            <td>138G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion II</strong></p>
-            </td>
-            <td><p>880G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion II</td>
+            <td>880G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion III</strong></p>
-            </td>
-            <td><p>3,300G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion III</td>
+            <td>3,300G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion IV</strong></p>
-            </td>
-            <td><p>8,800G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion IV</td>
+            <td>8,800G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion V</strong></p>
-            </td>
-            <td><p>8,250G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion V</td>
+            <td>8,250G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion VI</strong></p>
-            </td>
-            <td><p>10,725G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion VI</td>
+            <td>10,725G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion VII</strong></p>
-            </td>
-            <td><p>13,200G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion VII</td>
+            <td>13,200G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>HP Potion VIII</strong></p>
-            </td>
-            <td><p>16,500G</p></td>
-            <td><p>5</p></td>
+            <td>HP Potion VIII</td>
+            <td>16,500G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hyper Potion</strong></p>
-            </td>
-            <td><p>22,572G</p></td>
-            <td><p>5</p></td>
+            <td>Hyper Potion</td>
+            <td>22,572G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Reveal Desert Potion</strong></p>
-            </td>
-            <td><p>17,600G</p></td>
-            <td><p>5</p></td>
+            <td>Reveal Desert Potion</td>
+            <td>17,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Reveal Forest Potion</strong></p>
-            </td>
-            <td><p>5,500G</p></td>
-            <td><p>5</p></td>
+            <td>Reveal Forest Potion</td>
+            <td>5,500G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Reveal Golem Potion</strong></p>
-            </td>
-            <td><p>880G</p></td>
-            <td><p>5</p></td>
+            <td>Reveal Golem Potion</td>
+            <td>880G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Reveal Tech Potion</strong></p>
-            </td>
-            <td><p>35,200G</p></td>
-            <td><p>5</p></td>
+            <td>Reveal Tech Potion</td>
+            <td>35,200G</td>
+            <td>5</td>
           </tr>
         </thead>
       </table>
@@ -1410,372 +1098,280 @@
             <th scope="col"><p>Elemental Weapon?</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Broom Spear</strong></p>
-            </td>
-            <td><p>55G</p></td>
-            <td><p></p></td>
+            <td>Broom Spear</td>
+            <td>55G</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Training Big Sword</strong></p>
-            </td>
-            <td><p>1,100G</p></td>
-            <td><p></p></td>
+            <td>Training Big Sword</td>
+            <td>1,100G</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Training Bow</strong></p>
-            </td>
-            <td><p>1,100G</p></td>
-            <td><p></p></td>
+            <td>Training Bow</td>
+            <td>1,100G</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Training Gloves</strong></p>
-            </td>
-            <td><p>1,100G</p></td>
-            <td><p></p></td>
+            <td>Training Gloves</td>
+            <td>1,100G</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Training Spear</strong></p>
-            </td>
-            <td><p>1,100G</p></td>
-            <td><p></p></td>
+            <td>Training Spear</td>
+            <td>1,100G</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Training Short Sword</strong></p>
-            </td>
-            <td><p>1,100G</p></td>
-            <td><p></p></td>
+            <td>Training Short Sword</td>
+            <td>1,100G</td>
+            <td></td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Buster Big Sword</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Buster Big Sword</td>
+            <td>4,400G</td>
+            <td>1</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Catapult Bow</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
-            <td><p>Stun</p></td>
+            <td>Catapult Bow</td>
+            <td>4,400G</td>
+            <td>1</td>
+            <td>Stun</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Rock Big Sword </strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
-            <td><p>Stun</p></td>
+            <td>Rock Big Sword</td>
+            <td>4,400G</td>
+            <td>1</td>
+            <td>Stun</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Rough Gloves</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
-            <td><p>Stun</p></td>
+            <td>Rough Gloves</td>
+            <td>4,400G</td>
+            <td>1</td>
+            <td>Stun</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Rusty Short Sword</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
-            <td><p>Stun</p></td>
+            <td>Rusty Short Sword</td>
+            <td>4,400G</td>
+            <td>1</td>
+            <td>Stun</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Golem Drill Spear</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
-            <td><p>Stun</p></td>
+            <td>Golem Drill Spear</td>
+            <td>4,400G</td>
+            <td>1</td>
+            <td>Stun</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Warrior Spear</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Warrior Spear</td>
+            <td>4,400G</td>
+            <td>1</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fighter Gloves</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Fighter Gloves</td>
+            <td>4,400G</td>
+            <td>1</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Soldier Short Sword</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Soldier Short Sword</td>
+            <td>4,400G</td>
+            <td>1</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hunter Bow</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Hunter Bow</td>
+            <td>4,400G</td>
+            <td>1</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Wood's Spear</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
+            <td>Wood's Spear</td>
+            <td>70,400G</td>
+            <td>2</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Knight Short Sword</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
+            <td>Knight Short Sword</td>
+            <td>70,400G</td>
+            <td>2</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Natural Bow</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
+            <td>Natural Bow</td>
+            <td>70,400G</td>
+            <td>2</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Forest Spirit Gloves</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
+            <td>Forest Spirit Gloves</td>
+            <td>70,400G</td>
+            <td>2</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Wild Big Sword</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
+            <td>Wild Big Sword</td>
+            <td>70,400G</td>
+            <td>2</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Poison Bow</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
-            <td><p>Poison</p></td>
+            <td>Poison Bow</td>
+            <td>70,400G</td>
+            <td>2</td>
+            <td>Poison</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Toxic Big Sword </strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
-            <td><p>Poison</p></td>
+            <td>Toxic Big Sword</td>
+            <td>70,400G</td>
+            <td>2</td>
+            <td>Poison</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Venom Sting Spear</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
-            <td><p>Poison</p></td>
+            <td>Venom Sting Spear</td>
+            <td>70,400G</td>
+            <td>2</td>
+            <td>Poison</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Venom Short Sword</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
-            <td><p>Poison</p></td>
+            <td>Venom Short Sword</td>
+            <td>70,400G</td>
+            <td>2</td>
+            <td>Poison</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Venom Twin Gloves </strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
-            <td><p>Poison</p></td>
+            <td>Venom Twin Gloves</td>
+            <td>70,400G</td>
+            <td>2</td>
+            <td>Poison</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Captain Gloves</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
+            <td>Captain Gloves</td>
+            <td>281,600G</td>
+            <td>3</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Commander Short Sword</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
+            <td>Commander Short Sword</td>
+            <td>281,600G</td>
+            <td>3</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Monkey Spear</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
+            <td>Monkey Spear</td>
+            <td>281,600G</td>
+            <td>3</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Soldier Bow</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
+            <td>Soldier Bow</td>
+            <td>281,600G</td>
+            <td>3</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Vulcan Big Sword</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
+            <td>Vulcan Big Sword</td>
+            <td>281,600G</td>
+            <td>3</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hell Spear </strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
-            <td><p>Burn</p></td>
+            <td>Hell Spear</td>
+            <td>281,600G</td>
+            <td>3</td>
+            <td>Burn</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Flame Gloves</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
-            <td><p>Burn</p></td>
+            <td>Flame Gloves</td>
+            <td>281,600G</td>
+            <td>3</td>
+            <td>Burn</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Flamethrower Bow</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
-            <td><p>Burn</p></td>
+            <td>Flamethrower Bow</td>
+            <td>281,600G</td>
+            <td>3</td>
+            <td>Burn</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Reborn Short Sword</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
-            <td><p>Burn</p></td>
+            <td>Reborn Short Sword</td>
+            <td>281,600G</td>
+            <td>3</td>
+            <td>Burn</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Blaze Big Sword</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
-            <td><p>Burn</p></td>
+            <td>Blaze Big Sword</td>
+            <td>281,600G</td>
+            <td>3</td>
+            <td>Burn</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Exeter Bow</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
+            <td>Exeter Bow</td>
+            <td>563,200G</td>
+            <td>4</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fighter Spear</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
+            <td>Fighter Spear</td>
+            <td>563,200G</td>
+            <td>4</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fusion Big Sword</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
+            <td>Fusion Big Sword</td>
+            <td>563,200G</td>
+            <td>4</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>King Short Sword</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
+            <td>King Short Sword</td>
+            <td>563,200G</td>
+            <td>4</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Star Platinum Gloves</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
+            <td>Star Platinum Gloves</td>
+            <td>563,200G</td>
+            <td>4</td>
             <td></td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Vampire Short Sword</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
-            <td><p>Shocking</p></td>
+            <td>Vampire Short Sword</td>
+            <td>563,200G</td>
+            <td>4</td>
+            <td>Shocking</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Lightning Bow</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
-            <td><p>Shocking</p></td>
+            <td>Lightning Bow</td>
+            <td>563,200G</td>
+            <td>4</td>
+            <td>Shocking</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Lightning Rod Spear</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
-            <td><p>Shocking</p></td>
+            <td>Lightning Rod Spear</td>
+            <td>563,200G</td>
+            <td>4</td>
+            <td>Shocking</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Storm Big Sword</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
-            <td><p>Shocking</p></td>
+            <td>Storm Big Sword</td>
+            <td>563,200G</td>
+            <td>4</td>
+            <td>Shocking</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Thunder Gloves</strong></p>
-            </td>
-            <td><p>563,200G</p></td>
-            <td><p>4</p></td>
-            <td><p>Shocking</p></td>
+            <td>Thunder Gloves</td>
+            <td>563,200G</td>
+            <td>4</td>
+            <td>Shocking</td>
           </tr>
         </thead>
       </table>
@@ -1790,179 +1386,129 @@
             <th scope="col"><p>Weapon Tier</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ether Sable I</strong></p>
-            </td>
-            <td><p>501,600G</p></td>
-            <td><p>1</p></td>
+            <td>Ether Sable I</td>
+            <td>501,600G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ether Sable II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Ether Sable II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ether Sable III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Ether Sable III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ether Sable IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Ether Sable IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ether Sable V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Ether Sable V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ragnarok Big Sword I</strong></p>
-            </td>
-            <td><p>501,600G</p></td>
-            <td><p>1</p></td>
+            <td>Ragnarok Big Sword I</td>
+            <td>501,600G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ragnarok Big Sword II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Ragnarok Big Sword II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ragnarok Big Sword III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Ragnarok Big Sword III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ragnarok Big Sword IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Ragnarok Big Sword IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Ragnarok Big Sword V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Ragnarok Big Sword V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Valkyrie Spear I</strong></p>
-            </td>
-            <td><p>501,600G</p></td>
-            <td><p>1</p></td>
+            <td>Valkyrie Spear I</td>
+            <td>501,600G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Valkyrie Spear II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Valkyrie Spear II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Valkyrie Spear III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Valkyrie Spear III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Valkyrie Spear IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Valkyrie Spear IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Valkyrie Spear V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Valkyrie Spear V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Master Fists I</strong></p>
-            </td>
-            <td><p>501,600G</p></td>
-            <td><p>1</p></td>
+            <td>Master Fists I</td>
+            <td>501,600G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Master Fists II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Master Fists II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Master Fists III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Master Fists III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Master Fists IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Master Fists IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Master Fists V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Master Fists V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Runic Bow I</strong></p>
-            </td>
-            <td><p>501,600G</p></td>
-            <td><p>1</p></td>
+            <td>Runic Bow I</td>
+            <td>501,600G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Runic Bow II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Runic Bow II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Runic Bow III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Runic Bow III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Runic Bow IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Runic Bow IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Runic Bow V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Runic Bow V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
         </thead>
       </table>
@@ -1977,60 +1523,44 @@
             <th scope="col"><p>Weapon Tier</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Sword I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Hero's Sword I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Sword II</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
+            <td>Hero's Sword II</td>
+            <td>70,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Sword III</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
+            <td>Hero's Sword III</td>
+            <td>281,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Sword IV</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>4</p></td>
+            <td>Hero's Sword IV</td>
+            <td>721,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Bow I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Hero's Bow I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Bow II</strong></p>
-            </td>
-            <td><p>70,400G</p></td>
-            <td><p>2</p></td>
+            <td>Hero's Bow II</td>
+            <td>70,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Bow III</strong></p>
-            </td>
-            <td><p>281,600G</p></td>
-            <td><p>3</p></td>
+            <td>Hero's Bow III</td>
+            <td>281,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hero's Bow IV</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>4</p></td>
+            <td>Hero's Bow IV</td>
+            <td>721,600G</td>
+            <td>4</td>
           </tr>
         </thead>
       </table>
@@ -2045,256 +1575,184 @@
             <th scope="col"><p>Armor Tier</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Boots I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Fabric Boots I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Chestplate I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Fabric Chestplate I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Bandana I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Fabric Bandana I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Boots II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Fabric Boots II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Chestplate II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Fabric Chestplate II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Bandana II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Fabric Bandana II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Boots III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Fabric Boots III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Chestplate III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Fabric Chestplate III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Bandana III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Fabric Bandana III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Boots IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Fabric Boots IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Chestplate IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Fabric Chestplate IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Fabric Bandana IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Fabric Bandana IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Boots I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Iron Boots I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Chestplate I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Iron Chestplate I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Helmet I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Iron Helmet I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Boots II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Iron Boots II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Chestplate II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Iron Chestplate II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Helmet II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Iron Helmet II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Boots III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Iron Boots III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Chestplate III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Iron Chestplate III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Helmet III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Iron Helmet III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Boots IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Iron Boots IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Chestplate IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Iron Chestplate IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Iron Helmet IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Iron Helmet IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Boots I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Hardened Steel Boots I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Chestplate I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Hardened Steel Chestplate I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Helmet I</strong></p>
-            </td>
-            <td><p>4,400G</p></td>
-            <td><p>1</p></td>
+            <td>Hardened Steel Helmet I</td>
+            <td>4,400G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Boots II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Hardened Steel Boots II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Chestplate II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Hardened Steel Chestplate II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Helmet II</strong></p>
-            </td>
-            <td><p>48,400G</p></td>
-            <td><p>2</p></td>
+            <td>Hardened Steel Helmet II</td>
+            <td>48,400G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Boots III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Hardened Steel Boots III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Chestplate III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Hardened Steel Chestplate III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Helmet III</strong></p>
-            </td>
-            <td><p>105,600G</p></td>
-            <td><p>3</p></td>
+            <td>Hardened Steel Helmet III</td>
+            <td>105,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Boots IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Hardened Steel Boots IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Chestplate IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Hardened Steel Chestplate IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Hardened Steel Helmet IV</strong></p>
-            </td>
-            <td><p>211,200G</p></td>
-            <td><p>4</p></td>
+            <td>Hardened Steel Helmet IV</td>
+            <td>211,200G</td>
+            <td>4</td>
           </tr>
         </thead>
       </table>
@@ -2309,109 +1767,79 @@
             <th scope="col"><p>Armor Tier</p></th>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Boots I</strong></p>
-            </td>
-            <td><p>475,200G</p></td>
-            <td><p>1</p></td>
+            <td>Composite Armor Boots I</td>
+            <td>475,200G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Chestplate I</strong></p>
-            </td>
-            <td><p>501,600G</p></td>
-            <td><p>1</p></td>
+            <td>Composite Armor Chestplate I</td>
+            <td>501,600G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Helmet I</strong></p>
-            </td>
-            <td><p>501,600G</p></td>
-            <td><p>1</p></td>
+            <td>Composite Armor Helmet I</td>
+            <td>501,600G</td>
+            <td>1</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Boots II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Composite Armor Boots II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Chestplate II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Composite Armor Chestplate II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Helmet II</strong></p>
-            </td>
-            <td><p>556,600G</p></td>
-            <td><p>2</p></td>
+            <td>Composite Armor Helmet II</td>
+            <td>556,600G</td>
+            <td>2</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Boots III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Composite Armor Boots III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Chestplate III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Composite Armor Chestplate III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Helmet III</strong></p>
-            </td>
-            <td><p>611,600G</p></td>
-            <td><p>3</p></td>
+            <td>Composite Armor Helmet III</td>
+            <td>611,600G</td>
+            <td>3</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Boots IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Composite Armor Boots IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Chestplate IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Composite Armor Chestplate IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Helmet IV</strong></p>
-            </td>
-            <td><p>666,600G</p></td>
-            <td><p>4</p></td>
+            <td>Composite Armor Helmet IV</td>
+            <td>666,600G</td>
+            <td>4</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Boots V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Composite Armor Boots V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Chestplate V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Composite Armor Chestplate V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
           <tr>
-            <td>
-              <p><strong>Composite Armor Helmet V</strong></p>
-            </td>
-            <td><p>721,600G</p></td>
-            <td><p>5</p></td>
+            <td>Composite Armor Helmet V</td>
+            <td>721,600G</td>
+            <td>5</td>
           </tr>
         </thead>
       </table>
